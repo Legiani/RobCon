@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		693A1C761F810F3400433532 /* loud.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A1C6D1F810F3400433532 /* loud.png */; };
+		693A1C771F810F3400433532 /* action.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A1C6E1F810F3400433532 /* action.png */; };
+		693A1C781F810F3400433532 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A1C6F1F810F3400433532 /* music.png */; };
+		693A1C791F810F3400433532 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A1C701F810F3400433532 /* arrow_right.png */; };
+		693A1C7A1F810F3400433532 /* light.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A1C711F810F3400433532 /* light.png */; };
+		693A1C7B1F810F3400433532 /* console.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A1C721F810F3400433532 /* console.png */; };
+		693A1C7C1F810F3400433532 /* pause-play.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A1C731F810F3400433532 /* pause-play.png */; };
+		693A1C7D1F810F3400433532 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A1C741F810F3400433532 /* next.png */; };
+		693A1C7E1F810F3400433532 /* lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A1C751F810F3400433532 /* lamp.png */; };
+		693ADEBE201DD6F7008C0F6F /* mseSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693ADEBD201DD6F7008C0F6F /* mseSound.swift */; };
+		693ADEC0201DE222008C0F6F /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693ADEBF201DE222008C0F6F /* myCell.swift */; };
+		69595C2520249D1700EE2433 /* deviceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69595C2420249D1700EE2433 /* deviceViewCell.swift */; };
+		69642A651F80ED430015DB4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69642A641F80ED430015DB4C /* AppDelegate.swift */; };
+		69642A671F80ED430015DB4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69642A661F80ED430015DB4C /* ViewController.swift */; };
+		69642A6A1F80ED430015DB4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69642A681F80ED430015DB4C /* Main.storyboard */; };
+		69642A6C1F80ED430015DB4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69642A6B1F80ED430015DB4C /* Assets.xcassets */; };
+		69642A6F1F80ED430015DB4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69642A6D1F80ED430015DB4C /* LaunchScreen.storyboard */; };
+		69642A7A1F80ED430015DB4C /* RobConUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69642A791F80ED430015DB4C /* RobConUITests.swift */; };
+		696E3384201FB482002DB06C /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E3383201FB482002DB06C /* BluetoothSerial.swift */; };
+		697601E7201B9084005DF295 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697601E6201B9084005DF295 /* AudioToolbox.framework */; };
+		697601E9201B90FF005DF295 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697601E8201B90FF005DF295 /* MediaPlayer.framework */; };
+		697601EB201B9493005DF295 /* mseControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697601EA201B9493005DF295 /* mseControler.swift */; };
+		69A1316D1FB9DA5000D6A55A /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A1316A1FB9DA4F00D6A55A /* back.png */; };
+		69A1316E1FB9DA5000D6A55A /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A1316B1FB9DA5000D6A55A /* arrow_down.png */; };
+		69A1316F1FB9DA5000D6A55A /* arrow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A1316C1FB9DA5000D6A55A /* arrow_up.png */; };
+		69A54D19201F41EC001934CD /* wubitog__space-beam.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69A54D13201F41EB001934CD /* wubitog__space-beam.mp3 */; };
+		69A54D1A201F41EC001934CD /* owlstorm__retro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69A54D14201F41EB001934CD /* owlstorm__retro.mp3 */; };
+		69A54D1B201F41EC001934CD /* aust-paul__whatever.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69A54D15201F41EC001934CD /* aust-paul__whatever.mp3 */; };
+		69A54D1C201F41EC001934CD /* screamstudio__robot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69A54D16201F41EC001934CD /* screamstudio__robot.mp3 */; };
+		69A54D1D201F41EC001934CD /* urupin__robot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69A54D17201F41EC001934CD /* urupin__robot.mp3 */; };
+		69A54D1E201F41EC001934CD /* fullmetaljedi__r2d2-sad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69A54D18201F41EC001934CD /* fullmetaljedi__r2d2-sad.mp3 */; };
+		69A6E0041F8261DF0013D172 /* mouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A6E0021F8261DF0013D172 /* mouse.png */; };
+		69A6E0051F8261DF0013D172 /* r2.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A6E0031F8261DF0013D172 /* r2.png */; };
+		69D3F0472021E5EE00DE3911 /* consoleControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D3F0462021E5EE00DE3911 /* consoleControler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69642A761F80ED430015DB4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69642A591F80ED420015DB4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69642A601F80ED430015DB4C;
+			remoteInfo = RobCon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		693A1C6D1F810F3400433532 /* loud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loud.png; sourceTree = "<group>"; };
+		693A1C6E1F810F3400433532 /* action.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = action.png; sourceTree = "<group>"; };
+		693A1C6F1F810F3400433532 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
+		693A1C701F810F3400433532 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
+		693A1C711F810F3400433532 /* light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light.png; sourceTree = "<group>"; };
+		693A1C721F810F3400433532 /* console.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = console.png; sourceTree = "<group>"; };
+		693A1C731F810F3400433532 /* pause-play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-play.png"; sourceTree = "<group>"; };
+		693A1C741F810F3400433532 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		693A1C751F810F3400433532 /* lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp.png; sourceTree = "<group>"; };
+		693ADEBD201DD6F7008C0F6F /* mseSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mseSound.swift; sourceTree = "<group>"; };
+		693ADEBF201DE222008C0F6F /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
+		69595C2420249D1700EE2433 /* deviceViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = deviceViewCell.swift; sourceTree = "<group>"; };
+		69642A611F80ED430015DB4C /* RobCon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobCon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69642A641F80ED430015DB4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		69642A661F80ED430015DB4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		69642A691F80ED430015DB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		69642A6B1F80ED430015DB4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69642A6E1F80ED430015DB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		69642A701F80ED430015DB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69642A751F80ED430015DB4C /* RobConUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobConUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69642A791F80ED430015DB4C /* RobConUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobConUITests.swift; sourceTree = "<group>"; };
+		69642A7B1F80ED430015DB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		696E3383201FB482002DB06C /* BluetoothSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
+		697601E4201B9083005DF295 /* RobCon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RobCon.entitlements; sourceTree = "<group>"; };
+		697601E6201B9084005DF295 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		697601E8201B90FF005DF295 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		697601EA201B9493005DF295 /* mseControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mseControler.swift; sourceTree = "<group>"; };
+		69A1316A1FB9DA4F00D6A55A /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		69A1316B1FB9DA5000D6A55A /* arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_down.png; sourceTree = "<group>"; };
+		69A1316C1FB9DA5000D6A55A /* arrow_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_up.png; sourceTree = "<group>"; };
+		69A54D12201F0651001934CD /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		69A54D13201F41EB001934CD /* wubitog__space-beam.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "wubitog__space-beam.mp3"; sourceTree = "<group>"; };
+		69A54D14201F41EB001934CD /* owlstorm__retro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = owlstorm__retro.mp3; sourceTree = "<group>"; };
+		69A54D15201F41EC001934CD /* aust-paul__whatever.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "aust-paul__whatever.mp3"; sourceTree = "<group>"; };
+		69A54D16201F41EC001934CD /* screamstudio__robot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = screamstudio__robot.mp3; sourceTree = "<group>"; };
+		69A54D17201F41EC001934CD /* urupin__robot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = urupin__robot.mp3; sourceTree = "<group>"; };
+		69A54D18201F41EC001934CD /* fullmetaljedi__r2d2-sad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "fullmetaljedi__r2d2-sad.mp3"; sourceTree = "<group>"; };
+		69A54D20201F6200001934CD /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
+		69A54D21201F6200001934CD /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		69A6E0021F8261DF0013D172 /* mouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouse.png; sourceTree = "<group>"; };
+		69A6E0031F8261DF0013D172 /* r2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r2.png; sourceTree = "<group>"; };
+		69D3F0462021E5EE00DE3911 /* consoleControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = consoleControler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69642A5E1F80ED430015DB4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				697601E9201B90FF005DF295 /* MediaPlayer.framework in Frameworks */,
+				697601E7201B9084005DF295 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69642A721F80ED430015DB4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		693A1C6C1F810F3400433532 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				69A54D12201F0651001934CD /* logo.png */,
+				69A1316B1FB9DA5000D6A55A /* arrow_down.png */,
+				69A1316C1FB9DA5000D6A55A /* arrow_up.png */,
+				69A1316A1FB9DA4F00D6A55A /* back.png */,
+				69A6E0021F8261DF0013D172 /* mouse.png */,
+				69A6E0031F8261DF0013D172 /* r2.png */,
+				693A1C6D1F810F3400433532 /* loud.png */,
+				693A1C6E1F810F3400433532 /* action.png */,
+				693A1C6F1F810F3400433532 /* music.png */,
+				693A1C701F810F3400433532 /* arrow_right.png */,
+				693A1C711F810F3400433532 /* light.png */,
+				693A1C721F810F3400433532 /* console.png */,
+				693A1C731F810F3400433532 /* pause-play.png */,
+				693A1C741F810F3400433532 /* next.png */,
+				693A1C751F810F3400433532 /* lamp.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		69642A581F80ED420015DB4C = {
+			isa = PBXGroup;
+			children = (
+				69A54D1F201F41F5001934CD /* music */,
+				693A1C6C1F810F3400433532 /* images */,
+				69642A631F80ED430015DB4C /* RobCon */,
+				69642A781F80ED430015DB4C /* RobConUITests */,
+				69642A621F80ED430015DB4C /* Products */,
+				697601E5201B9084005DF295 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		69642A621F80ED430015DB4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69642A611F80ED430015DB4C /* RobCon.app */,
+				69642A751F80ED430015DB4C /* RobConUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69642A631F80ED430015DB4C /* RobCon */ = {
+			isa = PBXGroup;
+			children = (
+				69595C2420249D1700EE2433 /* deviceViewCell.swift */,
+				697601E4201B9083005DF295 /* RobCon.entitlements */,
+				69642A641F80ED430015DB4C /* AppDelegate.swift */,
+				69642A661F80ED430015DB4C /* ViewController.swift */,
+				69642A681F80ED430015DB4C /* Main.storyboard */,
+				69642A6B1F80ED430015DB4C /* Assets.xcassets */,
+				69642A6D1F80ED430015DB4C /* LaunchScreen.storyboard */,
+				69642A701F80ED430015DB4C /* Info.plist */,
+				697601EA201B9493005DF295 /* mseControler.swift */,
+				693ADEBD201DD6F7008C0F6F /* mseSound.swift */,
+				693ADEBF201DE222008C0F6F /* myCell.swift */,
+				696E3383201FB482002DB06C /* BluetoothSerial.swift */,
+				69D3F0462021E5EE00DE3911 /* consoleControler.swift */,
+			);
+			path = RobCon;
+			sourceTree = "<group>";
+		};
+		69642A781F80ED430015DB4C /* RobConUITests */ = {
+			isa = PBXGroup;
+			children = (
+				69642A791F80ED430015DB4C /* RobConUITests.swift */,
+				69642A7B1F80ED430015DB4C /* Info.plist */,
+			);
+			path = RobConUITests;
+			sourceTree = "<group>";
+		};
+		697601E5201B9084005DF295 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				697601E8201B90FF005DF295 /* MediaPlayer.framework */,
+				697601E6201B9084005DF295 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69A54D1F201F41F5001934CD /* music */ = {
+			isa = PBXGroup;
+			children = (
+				69A54D15201F41EC001934CD /* aust-paul__whatever.mp3 */,
+				69A54D18201F41EC001934CD /* fullmetaljedi__r2d2-sad.mp3 */,
+				69A54D14201F41EB001934CD /* owlstorm__retro.mp3 */,
+				69A54D16201F41EC001934CD /* screamstudio__robot.mp3 */,
+				69A54D17201F41EC001934CD /* urupin__robot.mp3 */,
+				69A54D13201F41EB001934CD /* wubitog__space-beam.mp3 */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69642A601F80ED430015DB4C /* RobCon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69642A7E1F80ED430015DB4C /* Build configuration list for PBXNativeTarget "RobCon" */;
+			buildPhases = (
+				69642A5D1F80ED430015DB4C /* Sources */,
+				69642A5E1F80ED430015DB4C /* Frameworks */,
+				69642A5F1F80ED430015DB4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RobCon;
+			productName = RobCon;
+			productReference = 69642A611F80ED430015DB4C /* RobCon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69642A741F80ED430015DB4C /* RobConUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69642A811F80ED430015DB4C /* Build configuration list for PBXNativeTarget "RobConUITests" */;
+			buildPhases = (
+				69642A711F80ED430015DB4C /* Sources */,
+				69642A721F80ED430015DB4C /* Frameworks */,
+				69642A731F80ED430015DB4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69642A771F80ED430015DB4C /* PBXTargetDependency */,
+			);
+			name = RobConUITests;
+			productName = RobConUITests;
+			productReference = 69642A751F80ED430015DB4C /* RobConUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69642A591F80ED420015DB4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Jakub Bednář";
+				TargetAttributes = {
+					69642A601F80ED430015DB4C = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+						};
+					};
+					69642A741F80ED430015DB4C = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 69642A601F80ED430015DB4C;
+					};
+				};
+			};
+			buildConfigurationList = 69642A5C1F80ED420015DB4C /* Build configuration list for PBXProject "RobCon" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69642A581F80ED420015DB4C;
+			productRefGroup = 69642A621F80ED430015DB4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69642A601F80ED430015DB4C /* RobCon */,
+				69642A741F80ED430015DB4C /* RobConUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69642A5F1F80ED430015DB4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				693A1C7B1F810F3400433532 /* console.png in Resources */,
+				69642A6F1F80ED430015DB4C /* LaunchScreen.storyboard in Resources */,
+				69A54D1D201F41EC001934CD /* urupin__robot.mp3 in Resources */,
+				693A1C771F810F3400433532 /* action.png in Resources */,
+				69A1316E1FB9DA5000D6A55A /* arrow_down.png in Resources */,
+				69A54D19201F41EC001934CD /* wubitog__space-beam.mp3 in Resources */,
+				69A54D1C201F41EC001934CD /* screamstudio__robot.mp3 in Resources */,
+				69A54D1E201F41EC001934CD /* fullmetaljedi__r2d2-sad.mp3 in Resources */,
+				69A54D1A201F41EC001934CD /* owlstorm__retro.mp3 in Resources */,
+				693A1C7D1F810F3400433532 /* next.png in Resources */,
+				69A6E0041F8261DF0013D172 /* mouse.png in Resources */,
+				69642A6C1F80ED430015DB4C /* Assets.xcassets in Resources */,
+				69A54D1B201F41EC001934CD /* aust-paul__whatever.mp3 in Resources */,
+				693A1C7E1F810F3400433532 /* lamp.png in Resources */,
+				69A6E0051F8261DF0013D172 /* r2.png in Resources */,
+				693A1C7C1F810F3400433532 /* pause-play.png in Resources */,
+				69642A6A1F80ED430015DB4C /* Main.storyboard in Resources */,
+				693A1C7A1F810F3400433532 /* light.png in Resources */,
+				69A1316D1FB9DA5000D6A55A /* back.png in Resources */,
+				693A1C761F810F3400433532 /* loud.png in Resources */,
+				69A1316F1FB9DA5000D6A55A /* arrow_up.png in Resources */,
+				693A1C791F810F3400433532 /* arrow_right.png in Resources */,
+				693A1C781F810F3400433532 /* music.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69642A731F80ED430015DB4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69642A5D1F80ED430015DB4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69642A671F80ED430015DB4C /* ViewController.swift in Sources */,
+				69642A651F80ED430015DB4C /* AppDelegate.swift in Sources */,
+				69595C2520249D1700EE2433 /* deviceViewCell.swift in Sources */,
+				696E3384201FB482002DB06C /* BluetoothSerial.swift in Sources */,
+				693ADEC0201DE222008C0F6F /* myCell.swift in Sources */,
+				69D3F0472021E5EE00DE3911 /* consoleControler.swift in Sources */,
+				697601EB201B9493005DF295 /* mseControler.swift in Sources */,
+				693ADEBE201DD6F7008C0F6F /* mseSound.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69642A711F80ED430015DB4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69642A7A1F80ED430015DB4C /* RobConUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69642A771F80ED430015DB4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69642A601F80ED430015DB4C /* RobCon */;
+			targetProxy = 69642A761F80ED430015DB4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		69642A681F80ED430015DB4C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69642A691F80ED430015DB4C /* Base */,
+				69A54D20201F6200001934CD /* cs */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		69642A6D1F80ED430015DB4C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69642A6E1F80ED430015DB4C /* Base */,
+				69A54D21201F6200001934CD /* cs */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69642A7C1F80ED430015DB4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69642A7D1F80ED430015DB4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69642A7F1F80ED430015DB4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RobCon/RobCon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EC26TMBN8M;
+				INFOPLIST_FILE = RobCon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nontrema.RobCon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		69642A801F80ED430015DB4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RobCon/RobCon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EC26TMBN8M;
+				INFOPLIST_FILE = RobCon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nontrema.RobCon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		69642A821F80ED430015DB4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EC26TMBN8M;
+				INFOPLIST_FILE = RobConUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nontrema.RobConUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RobCon;
+			};
+			name = Debug;
+		};
+		69642A831F80ED430015DB4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EC26TMBN8M;
+				INFOPLIST_FILE = RobConUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nontrema.RobConUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RobCon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69642A5C1F80ED420015DB4C /* Build configuration list for PBXProject "RobCon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69642A7C1F80ED430015DB4C /* Debug */,
+				69642A7D1F80ED430015DB4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69642A7E1F80ED430015DB4C /* Build configuration list for PBXNativeTarget "RobCon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69642A7F1F80ED430015DB4C /* Debug */,
+				69642A801F80ED430015DB4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69642A811F80ED430015DB4C /* Build configuration list for PBXNativeTarget "RobConUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69642A821F80ED430015DB4C /* Debug */,
+				69642A831F80ED430015DB4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69642A591F80ED420015DB4C /* Project object */;
+}

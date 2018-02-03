@@ -1,0 +1,117 @@
+
+/* Class = "UINavigationItem"; title = "Consol"; ObjectID = "1wd-ku-zSF"; */
+"1wd-ku-zSF.title" = "Consol";
+
+/* Class = "UILabel"; text = "Status:"; ObjectID = "2BM-iG-rEb"; */
+"2BM-iG-rEb.text" = "Status:";
+
+/* Class = "UILabel"; text = "Last Log:"; ObjectID = "4kV-82-FcM"; */
+"4kV-82-FcM.text" = "Last Log:";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6kG-CY-Voz"; */
+"6kG-CY-Voz.normalTitle" = "Button";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "7Zw-cp-UCI"; */
+"7Zw-cp-UCI.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UINavigationItem"; title = "Choice Device"; ObjectID = "7oi-cU-J5q"; */
+"7oi-cU-J5q.title" = "Choice Device";
+
+/* Class = "UILabel"; text = "Last Log:"; ObjectID = "8Mo-dB-gc8"; */
+"8Mo-dB-gc8.text" = "Last Log:";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8Pn-kC-wAr"; */
+"8Pn-kC-wAr.normalTitle" = "Button";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "8Tw-W3-ebW"; */
+"8Tw-W3-ebW.title" = "Back";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Al6-oj-m4t"; */
+"Al6-oj-m4t.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Get your command"; ObjectID = "DVI-hV-j0C"; */
+"DVI-hV-j0C.placeholder" = "Get your command";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FW7-xI-epP"; */
+"FW7-xI-epP.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HQH-Po-VDu"; */
+"HQH-Po-VDu.normalTitle" = "Button";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "Hyk-TD-hVi"; */
+"Hyk-TD-hVi.title" = "Back";
+
+/* Class = "UINavigationItem"; title = "Astro Droid"; ObjectID = "Ibv-UP-7kq"; */
+"Ibv-UP-7kq.title" = "Astro Droid";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JqH-nq-BGS"; */
+"JqH-nq-BGS.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Console"; ObjectID = "LAg-lr-IVv"; */
+"LAg-lr-IVv.text" = "Console";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MXJ-s7-2Zu"; */
+"MXJ-s7-2Zu.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NRL-j6-rA7"; */
+"NRL-j6-rA7.normalTitle" = "Button";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "SAd-hY-wJ6"; */
+"SAd-hY-wJ6.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UuD-jP-JWT"; */
+"UuD-jP-JWT.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WG8-5K-9GP"; */
+"WG8-5K-9GP.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Wa5-Ai-XID"; */
+"Wa5-Ai-XID.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Astro Droid"; ObjectID = "X6n-ht-71I"; */
+"X6n-ht-71I.text" = "Astro Droid";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Xhb-n0-SwU"; */
+"Xhb-n0-SwU.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Zkq-Jf-8Jo"; */
+"Zkq-Jf-8Jo.text" = "Label";
+
+/* Class = "UILabel"; text = "Status:"; ObjectID = "bsY-Ao-CSI"; */
+"bsY-Ao-CSI.text" = "Status:";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "cAk-uu-vge"; */
+"cAk-uu-vge.title" = "Back";
+
+/* Class = "UILabel"; text = "Last Log:"; ObjectID = "eHf-Fe-Ei4"; */
+"eHf-Fe-Ei4.text" = "Last Log:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gTd-jg-5tJ"; */
+"gTd-jg-5tJ.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hAx-zx-vqo"; */
+"hAx-zx-vqo.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iaq-u5-mtu"; */
+"iaq-u5-mtu.text" = "Label";
+
+/* Class = "UILabel"; text = "Mouse Droid"; ObjectID = "jeh-hM-pmX"; */
+"jeh-hM-pmX.text" = "Mouse Droid";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mfd-88-tqA"; */
+"mfd-88-tqA.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Voices"; ObjectID = "nia-Gr-m9c"; */
+"nia-Gr-m9c.title" = "Voices";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "obY-h0-k6s"; */
+"obY-h0-k6s.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Mouse Droid"; ObjectID = "ufN-Qd-Um1"; */
+"ufN-Qd-Um1.title" = "Mouse Droid";
+
+/* Class = "UILabel"; text = "Status:"; ObjectID = "v04-ab-jc9"; */
+"v04-ab-jc9.text" = "Status:";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ywH-c2-FkM"; */
+"ywH-c2-FkM.normalTitle" = "Button";
