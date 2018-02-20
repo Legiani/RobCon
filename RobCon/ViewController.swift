@@ -5,11 +5,14 @@
 //  Created by Jakub Bednář on 01.10.17.
 //  Copyright © 2017 Jakub Bednář. All rights reserved.
 //
-// Base on https://github.com/hoiberg/swiftBluetoothSerial and https://github.com/hoiberg/HM10-BluetoothSerial-iOS/blob/master/HM10%20Serial/SerialViewController.swift and https://github.com/PTEz/PTEHorizontalTableView
+// Base on https://github.com/hoiberg/swiftBluetoothSerial
+// and https://github.com/hoiberg/HM10-BluetoothSerial-iOS/blob/master/HM10%20Serial/SerialViewController.swift
+// and https://github.com/PTEz/PTEHorizontalTableView
 
 //import knihoven
 import UIKit
 import CoreBluetooth
+
 
 
 //main page class (hlavní třída page s vyberem kontroleru)
@@ -132,10 +135,10 @@ final class ViewController: UIViewController, BluetoothSerialDelegate1, UICollec
         cell.devLabel.text = peripherals[(indexPath as NSIndexPath).row].peripheral.name
         //obrázek cell
         switch peripherals[(indexPath as NSIndexPath).row].peripheral.name {
-        case "MSE-6"?:
+        case Config.mse?:
             cell.devImage.image = #imageLiteral(resourceName: "mouse.png")
             break
-        case "R2-D2"?:
+        case Config.r2?:
             cell.devImage.image = #imageLiteral(resourceName: "r2.png")
             break
         default:
@@ -148,7 +151,10 @@ final class ViewController: UIViewController, BluetoothSerialDelegate1, UICollec
     //přesmerování na stranku s ovladačem del nazvu BLE
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //definice selectedPeripheral vybraným zařízením
-        selectedPeripheral = peripherals[(indexPath as NSIndexPath).row].peripheral
+        
+        if(peripherals.count >= 1){
+            selectedPeripheral = peripherals[(indexPath as NSIndexPath).row].peripheral
+        }
         //vymazaní pole zařízení
         peripherals = []
         //připojení k zařízení
@@ -156,15 +162,17 @@ final class ViewController: UIViewController, BluetoothSerialDelegate1, UICollec
         
         //přesmerování na stránku de nazvu zařízení
         switch selectedPeripheral?.name {
-        case "MSE-6"?:
-            performSegue(withIdentifier: "msePage", sender: (Any).self)
+        case Config.mse?:
+            performSegue(withIdentifier: Config.mse_page, sender: (Any).self)
             break
-        case "R2-D2"?:
-            performSegue(withIdentifier: "rPage", sender: Any?.self)
+        case Config.r2?:
+            performSegue(withIdentifier: Config.r2_page, sender: Any?.self)
             break
         default:
-            performSegue(withIdentifier: "consolePage", sender: Any?.self)
+            performSegue(withIdentifier: Config.def_page, sender: Any?.self)
         }
     }
+    
+    
 }
 

@@ -5,10 +5,10 @@
 //  Created by Jakub Bednář on 26.01.18.
 //  Copyright © 2018 Jakub Bednář. All rights reserved.
 //
-// Music ase on https://github.com/mking/hue-ios/blob/master/WelcomeViewController.swift
+// Music base on https://github.com/mking/hue-ios/blob/master/WelcomeViewController.swift
 // and http://www.oodlestechnologies.com/blogs/Open-iTunes-Music-Library-to-Play-Songs-in-Swift
-// Icon is on GPL https://icons8.com/icon/new-icons/ios
-// Base serial on https://github.com/hoiberg/swiftBluetoothSerial and https://github.com/hoiberg/HM10-BluetoothSerial-iOS/blob/master/HM10%20Serial/SerialViewController.swift
+// Icon is on GNU GPL https://icons8.com/icon/new-icons/ios
+// Base serial comunication on https://github.com/hoiberg/swiftBluetoothSerial and https://github.com/hoiberg/HM10-BluetoothSerial-iOS/blob/master/HM10%20Serial/SerialViewController.swift
 
 //import knihoven
 import UIKit
@@ -48,39 +48,27 @@ class mseController: UIViewController, BluetoothSerialDelegate1, MPMediaPickerCo
         super.didReceiveMemoryWarning()
     }
     
+    
     //************ Práce s BLE ************
     
     // když BLE přijme zprávu od zařízení
     func serialDidReceiveString(_ message: String) {
         //přidej zprávu do textView
         textViewComunicaton.text! += message
-    }
+        
+        let range = NSMakeRange(textViewComunicaton.text.characters.count - 1, 0)
+        textViewComunicaton.scrollRangeToVisible(range) }
     
     // když je BLE v prubehu odpojeno
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
-        //navrat na stránku vyhledávání
-        self.navigationController?.popViewController(animated: true);
+        //volání funkce zavření aktualní stránky
+        dismiss(animated: true, completion: nil)
     }
     
     //když je v prubehu vypnut BLE
     func serialDidChangeState() {
-        // kontrola zda je BLE zapnutí
-        if (serial.centralManager.state != .poweredOn) {
-            // když je vypnutí bluetooth vyvolá se alert který odkazuje na ovladání bluetooth v nastavení
-            //definování alertu
-            let refreshAlert = UIAlertController(title: "Bluetooth is off", message: "Set Bluetooth on in options.", preferredStyle: UIAlertControllerStyle.alert)
-            refreshAlert.addAction(UIAlertAction(title: "Options", style: .default, handler: { (action: UIAlertAction!) in
-                //když je novější než iOS 10 otevře rovnou nastavení BLE jinak jenom nastavení (starší iOS funkci neměly)
-                if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(URL(string:"App-prefs:root=Bluetooth")!, options: [:], completionHandler: nil)
-                }else{
-                    UIApplication.shared.openURL(NSURL(string: "prefs:root=Settings")! as URL)
-                }
-            }))
-            //vyvolání alertu
-            present(refreshAlert, animated: true, completion: nil)
-            return
-        }
+        //volání funkce zavření aktualní stránky
+        dismiss(animated: true, completion: nil)
     }
     
     //************ Práce s hudbou ************
@@ -114,7 +102,7 @@ class mseController: UIViewController, BluetoothSerialDelegate1, MPMediaPickerCo
     
     //zavření prohlížeče hudby po zmačknutí "Zavřít"
     func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController) {
-        //volání funkce zavření prohlížeče hudby
+        //volání funkce zavření aktualní stránky
         dismiss(animated: true, completion: nil)
     }
     
@@ -147,54 +135,58 @@ class mseController: UIViewController, BluetoothSerialDelegate1, MPMediaPickerCo
     
     //************ Definování tlačítek ************
     
+    //Back
+    @IBAction func back(_ sender: Any) {
+        serial.disconnect()
+        dismiss(animated: true, completion: nil)
+    }
+    
     //Tlačítka akcí
     @IBAction func lamp(_ sender: Any) {
-        serial.sendMessageToDevice("a")
+        serial.sendMessageToDevice(Config.Lamp)
     }
     
     @IBAction func light(_ sender: Any) {
-        serial.sendMessageToDevice("s")
+        serial.sendMessageToDevice(Config.Light)
     }
     
     @IBAction func action(_ sender: Any) {
-        serial.sendMessageToDevice("u")
-        print("send dsdsd")
+        serial.sendMessageToDevice(Config.Action)
     }
     
-
     
     //Tlačítka motoru
     
     //levej motor dopredu
     @IBAction func Left_front(_ sender: Any) {
-        serial.sendMessageToDevice("n")
+        serial.sendMessageToDevice(Config.Left_front)
     }
     @IBAction func Left_front_up(_ sender: Any) {
-        serial.sendMessageToDevice("nb")
+        serial.sendMessageToDevice(Config.Left_front + Config.invers_prefix)
     }
     
     //levej motor dozadu
     @IBAction func Left_back(_ sender: Any) {
-        serial.sendMessageToDevice("d")
+        serial.sendMessageToDevice(Config.Left_back)
     }
     @IBAction func Left_back_up(_ sender: Any) {
-        serial.sendMessageToDevice("db")
+        serial.sendMessageToDevice(Config.Left_back + Config.invers_prefix)
     }
     
     //pravej motor dopredu
     @IBAction func Right_front(_ sender: Any) {
-        serial.sendMessageToDevice("p")
+        serial.sendMessageToDevice(Config.Right_front)
     }
     @IBAction func Right_front_up(_ sender: Any) {
-        serial.sendMessageToDevice("pb")
+        serial.sendMessageToDevice(Config.Right_front + Config.invers_prefix)
     }
     
     //pravej motor dozadu
     @IBAction func Right_back(_ sender: Any) {
-        serial.sendMessageToDevice("l")
+        serial.sendMessageToDevice(Config.Right_back)
     }
     @IBAction func Right_back_up(_ sender: Any) {
-        serial.sendMessageToDevice("lb")
+        serial.sendMessageToDevice(Config.Right_back + Config.invers_prefix)
     }
     
     

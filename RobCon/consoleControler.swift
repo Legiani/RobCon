@@ -40,38 +40,37 @@ final class consoleController: UIViewController, UITextFieldDelegate, BluetoothS
         comandShow.text! += comandInput.text!
         comandShow.text! += "\n"
         comandInput.text = ""
+        
+        let range = NSMakeRange(comandShow.text.characters.count - 1, 0)
+        comandShow.scrollRangeToVisible(range)
     }
+    
+    //tlačítko "Back"
+    @IBAction func back(_ sender: Any) {
+        //volání funkce zavření aktualní stránky
+        dismiss(animated: true, completion: nil)
+    }
+    
+    //************ Definování BLE ************
     
     // když BLE přijme zprávu od zařízení
     func serialDidReceiveString(_ message: String) {
         //přidej zprávu do textView
         comandShow.text! += message
+        
+        let range = NSMakeRange(comandShow.text.characters.count - 1, 0)
+        comandShow.scrollRangeToVisible(range)
     }
 
     //když je v prubehu vypnut BLE
     func serialDidChangeState() {
-        // kontrola zda je BLE zapnutí
-        if (serial.centralManager.state != .poweredOn) {
-            // když je vypnutí bluetooth vyvolá se alert který odkazuje na ovladání bluetooth v nastavení
-            //definování alertu
-            let refreshAlert = UIAlertController(title: "Bluetooth is off", message: "Set Bluetooth on in options.", preferredStyle: UIAlertControllerStyle.alert)
-            refreshAlert.addAction(UIAlertAction(title: "Options", style: .default, handler: { (action: UIAlertAction!) in
-                //když je novější než iOS 10 otevře rovnou nastavení BLE jinak jenom nastavení (starší iOS funkci neměly)
-                if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(URL(string:"App-prefs:root=Bluetooth")!, options: [:], completionHandler: nil)
-                }else{
-                    UIApplication.shared.openURL(NSURL(string: "prefs:root=Settings")! as URL)
-                }
-            }))
-            //vyvolání alertu
-            present(refreshAlert, animated: true, completion: nil)
-            return
-        }
+        //volání funkce zavření aktualní stránky
+        dismiss(animated: true, completion: nil)
     }
     
     // když je BLE v prubehu odpojeno
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
-        //navrat na stránku vyhledávání
-        self.navigationController?.popViewController(animated: true);
+        //volání funkce zavření aktualní stránky
+        dismiss(animated: true, completion: nil)
     }
 }

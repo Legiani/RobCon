@@ -13,6 +13,12 @@ import UIKit
 //sound page class (hlavní třída stránky s vypisem zvuku)
 class mseSound: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    
+    @IBAction func back(_ sender: Any) {
+        //zavření aktualní stránky
+      dismiss(animated: true, completion: nil)
+    }
+    
     //pole nazvu zvuku které budou vypsány
     let array:[String] = ["aust-paul__whatever",
                           "screamstudio__robot",
