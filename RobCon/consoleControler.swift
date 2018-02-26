@@ -7,36 +7,40 @@
 //
 // Base on https://github.com/hoiberg/swiftBluetoothSerial and https://github.com/hoiberg/HM10-BluetoothSerial-iOS/blob/master/HM10%20Serial/SerialViewController.swift
 
-//import knihoven
+// Import knihoven
 import UIKit
 import CoreBluetooth
 import QuartzCore
 
-//class pro ovladání stránky controleru
-final class consoleController: UIViewController, UITextFieldDelegate, BluetoothSerialDelegate1 {
+// Class pro ovladání stránky controleru
+final class consoleController: UIViewController, UITextFieldDelegate, BleSerialDelegate {
+    func serialStoped() {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
-    //definování vstupu textu od uživatele
+    // Definování vstupu textu od uživatele
     @IBOutlet var comandInput: UITextField!
-    //vypis I/O hlášek
+    // Vypis I/O hlášek
     @IBOutlet var comandShow: UITextView!
     
-    // když je page načtena
+    // Když je page načtena
     override func viewDidLoad() {
-        //načtení grefiky
+        // Načtení grefiky
         super.viewDidLoad()
         
-        // inicalizace serial jako třídy pro komunikaci
-        serial.delegate1 = self
+        // Inicalizace serial jako třídy pro komunikaci
+        Bserial.Bdelegate = self
         
-        // zobrazení klavesnice
+        // Zobrazení klavesnice
         comandInput.becomeFirstResponder()
     }
     
-    //************ Definování tlačítek ************
+    // ** Definování tlačítek **
 
-    //odeslání říkazu zařízení a přidání do konzole (odžádkování)
+    // Odeslání říkazu zařízení a přidání do konzole (odžádkování)
     @IBAction func sendCommand(_ sender: Any) {
-        serial.sendMessageToDevice(comandInput.text!)
+        Bserial.sendMessageToDevice(comandInput.text!)
         comandShow.text! += comandInput.text!
         comandShow.text! += "\n"
         comandInput.text = ""
@@ -45,32 +49,32 @@ final class consoleController: UIViewController, UITextFieldDelegate, BluetoothS
         comandShow.scrollRangeToVisible(range)
     }
     
-    //tlačítko "Back"
+    // Tlačítko "Back"
     @IBAction func back(_ sender: Any) {
-        //volání funkce zavření aktualní stránky
+        // Volání funkce zavření aktualní stránky
         dismiss(animated: true, completion: nil)
     }
     
-    //************ Definování BLE ************
+    // ** Definování BLE **
     
-    // když BLE přijme zprávu od zařízení
+    // Když BLE přijme zprávu od zařízení
     func serialDidReceiveString(_ message: String) {
-        //přidej zprávu do textView
+        // Přidej zprávu do textView
         comandShow.text! += message
         
         let range = NSMakeRange(comandShow.text.characters.count - 1, 0)
         comandShow.scrollRangeToVisible(range)
     }
 
-    //když je v prubehu vypnut BLE
+    // Když je v prubehu vypnut BLE
     func serialDidChangeState() {
-        //volání funkce zavření aktualní stránky
+        // Volání funkce zavření aktualní stránky
         dismiss(animated: true, completion: nil)
     }
     
-    // když je BLE v prubehu odpojeno
+    // Když je BLE v prubehu odpojeno
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
-        //volání funkce zavření aktualní stránky
+        // Volání funkce zavření aktualní stránky
         dismiss(animated: true, completion: nil)
     }
 }

@@ -6,45 +6,44 @@
 //  Copyright © 2018 Jakub Bednář. All rights reserved.
 //
 
-//import knihoven
+// Import knihoven
 import UIKit
 import AVFoundation
 
-//main cell class (hlavní třída cell s vypisem zvuku)
+// Main cell class (hlavní třída cell s vypisem zvuku)
 class myCell: UICollectionViewCell {
     
-    //definování I/O
+    // Definování I/O
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myImageView: UIImageView!
     
-    //proměná která obsahuje přehravač/přehrávanou hudbu
+    // Proměná která obsahuje přehravač/přehrávanou hudbu
     var player: AVAudioPlayer = AVAudioPlayer()
     
-    //když je víbrán zvuk
+    // Když je víbrán zvuk
     override var isSelected: Bool{
-        //je nastaveno
+        // Je nastaveno
         didSet{
-            //když je zrovna vybrání
+            // Když je zrovna vybrání
             if self.isSelected
             {
-                //ochrana
+                // Ochrana
                 do {
-                    //příkaz pro definování cesty a samotneho souboru
+                    // Příkaz pro definování cesty a samotneho souboru
                     try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: Bundle.main.path(forResource: self.myLabel.text, ofType: ".mp3")!) as URL)
                     
                 } catch {
-                    //chyba app zpadne
-                 
+                    return
                 }
-                //hraj
+                // Hraj
                 player.play()
-                //odklikni -> jinak se bude zvuk přehrávat stale dokola
+                // Odklikni -> jinak se bude zvuk přehrávat stale dokola
                 self.isSelected = false
             }
-            //když není nic vybráno
+            // Když není nic vybráno
             else
             {
-                //obnovení defaultního vzhledu
+                // Obnovení defaultního vzhledu
                 self.transform = CGAffineTransform.identity
 
             }

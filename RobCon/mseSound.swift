@@ -7,27 +7,19 @@
 //
 // Songs is on GPL https://freesound.org/people/Legiani/downloaded_sounds/
 
-//import knihoven
+// Import knihoven
 import UIKit
 
-//sound page class (hlavní třída stránky s vypisem zvuku)
+// Sound page class (hlavní třída stránky s vypisem zvuku)
 class mseSound: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     
     @IBAction func back(_ sender: Any) {
-        //zavření aktualní stránky
+        // Zavření aktualní stránky
       dismiss(animated: true, completion: nil)
     }
     
-    //pole nazvu zvuku které budou vypsány
-    let array:[String] = ["aust-paul__whatever",
-                          "screamstudio__robot",
-                          "fullmetaljedi__r2d2-sad",
-                          "owlstorm__retro",
-                          "urupin__robot",
-                          "wubitog__space-beam"]
-    
-    //po odevření stránky
+    // Po odevření stránky
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -35,18 +27,18 @@ class mseSound: UIViewController, UICollectionViewDataSource, UICollectionViewDe
         super.didReceiveMemoryWarning()
     }
     
-    //vrací počet položek v poly s nazvy zvuku
+    // Vrací počet položek v poly s nazvy zvuku
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return array.count
+        return Config.array.count
     }
     
-    //sestaví všechny cell a nasledně je vypiše
+    // Sestaví všechny cell a nasledně je vypiše
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! myCell
-        //definování obsahu cell
+        // Definování obsahu cell
         cell.myImageView.image = UIImage(named: "loud.png")
-        cell.myLabel.text = array[indexPath.row]
-        //vrací hotovou cell
+        cell.myLabel.text = Config.array[indexPath.row]
+        // Vrací hotovou cell
         return cell
     }
     

@@ -29,7 +29,6 @@
 		69642A6C1F80ED430015DB4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69642A6B1F80ED430015DB4C /* Assets.xcassets */; };
 		69642A6F1F80ED430015DB4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69642A6D1F80ED430015DB4C /* LaunchScreen.storyboard */; };
 		69642A7A1F80ED430015DB4C /* RobConUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69642A791F80ED430015DB4C /* RobConUITests.swift */; };
-		696E3384201FB482002DB06C /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E3383201FB482002DB06C /* BluetoothSerial.swift */; };
 		697601E7201B9084005DF295 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697601E6201B9084005DF295 /* AudioToolbox.framework */; };
 		697601E9201B90FF005DF295 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697601E8201B90FF005DF295 /* MediaPlayer.framework */; };
 		697601EB201B9493005DF295 /* mseControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697601EA201B9493005DF295 /* mseControler.swift */; };
@@ -44,6 +43,7 @@
 		69A54D1E201F41EC001934CD /* fullmetaljedi__r2d2-sad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69A54D18201F41EC001934CD /* fullmetaljedi__r2d2-sad.mp3 */; };
 		69A6E0041F8261DF0013D172 /* mouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A6E0021F8261DF0013D172 /* mouse.png */; };
 		69A6E0051F8261DF0013D172 /* r2.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A6E0031F8261DF0013D172 /* r2.png */; };
+		69BD7618204310B10023637D /* BleSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BD7617204310B10023637D /* BleSerial.swift */; };
 		69D3F0472021E5EE00DE3911 /* consoleControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D3F0462021E5EE00DE3911 /* consoleControler.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +84,6 @@
 		69642A751F80ED430015DB4C /* RobConUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobConUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69642A791F80ED430015DB4C /* RobConUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobConUITests.swift; sourceTree = "<group>"; };
 		69642A7B1F80ED430015DB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		696E3383201FB482002DB06C /* BluetoothSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 		697601E4201B9083005DF295 /* RobCon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RobCon.entitlements; sourceTree = "<group>"; };
 		697601E6201B9084005DF295 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		697601E8201B90FF005DF295 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -103,6 +102,7 @@
 		69A54D21201F6200001934CD /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		69A6E0021F8261DF0013D172 /* mouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouse.png; sourceTree = "<group>"; };
 		69A6E0031F8261DF0013D172 /* r2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r2.png; sourceTree = "<group>"; };
+		69BD7617204310B10023637D /* BleSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleSerial.swift; sourceTree = "<group>"; };
 		69D3F0462021E5EE00DE3911 /* consoleControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = consoleControler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,9 +186,9 @@
 				697601EA201B9493005DF295 /* mseControler.swift */,
 				693ADEBD201DD6F7008C0F6F /* mseSound.swift */,
 				693ADEBF201DE222008C0F6F /* myCell.swift */,
-				696E3383201FB482002DB06C /* BluetoothSerial.swift */,
 				69D3F0462021E5EE00DE3911 /* consoleControler.swift */,
 				6932E5602031FCEB00AA2544 /* Config.swift */,
+				69BD7617204310B10023637D /* BleSerial.swift */,
 			);
 			path = RobCon;
 			sourceTree = "<group>";
@@ -361,8 +361,8 @@
 				69642A671F80ED430015DB4C /* ViewController.swift in Sources */,
 				69642A651F80ED430015DB4C /* AppDelegate.swift in Sources */,
 				6932E5612031FCEB00AA2544 /* Config.swift in Sources */,
+				69BD7618204310B10023637D /* BleSerial.swift in Sources */,
 				69595C2520249D1700EE2433 /* deviceViewCell.swift in Sources */,
-				696E3384201FB482002DB06C /* BluetoothSerial.swift in Sources */,
 				693ADEC0201DE222008C0F6F /* myCell.swift in Sources */,
 				69D3F0472021E5EE00DE3911 /* consoleControler.swift in Sources */,
 				697601EB201B9493005DF295 /* mseControler.swift in Sources */,
@@ -528,13 +528,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EC26TMBN8M;
 				INFOPLIST_FILE = RobCon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nontrema.RobCon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -547,13 +548,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EC26TMBN8M;
 				INFOPLIST_FILE = RobCon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nontrema.RobCon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
