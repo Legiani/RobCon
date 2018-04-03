@@ -11,25 +11,25 @@ import UIKit
 import AVFoundation
 
 // Main cell class (hlavní třída cell s vypisem zvuku)
-class myCell: UICollectionViewCell {
+class soundCell: UICollectionViewCell {
     
     // Definování I/O
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myImageView: UIImageView!
     
-    // Proměná která obsahuje přehravač/přehrávanou hudbu
+    // Proměnná, která obsahuje přehrávač/přehrávanou hudbu
     var player: AVAudioPlayer = AVAudioPlayer()
     
-    // Když je víbrán zvuk
+    // Když je vybrán zvuk
     override var isSelected: Bool{
         // Je nastaveno
         didSet{
-            // Když je zrovna vybrání
+            // Když je vybrán konkrétní zvuk
             if self.isSelected
             {
                 // Ochrana
                 do {
-                    // Příkaz pro definování cesty a samotneho souboru
+                    // Příkaz pro definování cesty a samotného souboru
                     try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: Bundle.main.path(forResource: self.myLabel.text, ofType: ".mp3")!) as URL)
                     
                 } catch {
@@ -37,7 +37,7 @@ class myCell: UICollectionViewCell {
                 }
                 // Hraj
                 player.play()
-                // Odklikni -> jinak se bude zvuk přehrávat stale dokola
+                // Odklikni -> jinak se bude zvuk přehrávat stále dokola
                 self.isSelected = false
             }
             // Když není nic vybráno

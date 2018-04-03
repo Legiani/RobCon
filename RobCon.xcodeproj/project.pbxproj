@@ -20,9 +20,10 @@
 		693A1C7C1F810F3400433532 /* pause-play.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A1C731F810F3400433532 /* pause-play.png */; };
 		693A1C7D1F810F3400433532 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A1C741F810F3400433532 /* next.png */; };
 		693A1C7E1F810F3400433532 /* lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A1C751F810F3400433532 /* lamp.png */; };
-		693ADEBE201DD6F7008C0F6F /* mseSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693ADEBD201DD6F7008C0F6F /* mseSound.swift */; };
-		693ADEC0201DE222008C0F6F /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693ADEBF201DE222008C0F6F /* myCell.swift */; };
-		69595C2520249D1700EE2433 /* deviceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69595C2420249D1700EE2433 /* deviceViewCell.swift */; };
+		693ADEBE201DD6F7008C0F6F /* RobotSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693ADEBD201DD6F7008C0F6F /* RobotSound.swift */; };
+		693ADEC0201DE222008C0F6F /* soundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693ADEBF201DE222008C0F6F /* soundCell.swift */; };
+		693BF77F204F04EE00DA66E6 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BF77E204F04EE00DA66E6 /* About.swift */; };
+		69595C2520249D1700EE2433 /* deviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69595C2420249D1700EE2433 /* deviceCell.swift */; };
 		69642A651F80ED430015DB4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69642A641F80ED430015DB4C /* AppDelegate.swift */; };
 		69642A671F80ED430015DB4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69642A661F80ED430015DB4C /* ViewController.swift */; };
 		69642A6A1F80ED430015DB4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69642A681F80ED430015DB4C /* Main.storyboard */; };
@@ -31,7 +32,7 @@
 		69642A7A1F80ED430015DB4C /* RobConUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69642A791F80ED430015DB4C /* RobConUITests.swift */; };
 		697601E7201B9084005DF295 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697601E6201B9084005DF295 /* AudioToolbox.framework */; };
 		697601E9201B90FF005DF295 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697601E8201B90FF005DF295 /* MediaPlayer.framework */; };
-		697601EB201B9493005DF295 /* mseControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697601EA201B9493005DF295 /* mseControler.swift */; };
+		697601EB201B9493005DF295 /* RobotControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697601EA201B9493005DF295 /* RobotControler.swift */; };
 		69A1316D1FB9DA5000D6A55A /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A1316A1FB9DA4F00D6A55A /* back.png */; };
 		69A1316E1FB9DA5000D6A55A /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A1316B1FB9DA5000D6A55A /* arrow_down.png */; };
 		69A1316F1FB9DA5000D6A55A /* arrow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A1316C1FB9DA5000D6A55A /* arrow_up.png */; };
@@ -44,7 +45,15 @@
 		69A6E0041F8261DF0013D172 /* mouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A6E0021F8261DF0013D172 /* mouse.png */; };
 		69A6E0051F8261DF0013D172 /* r2.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A6E0031F8261DF0013D172 /* r2.png */; };
 		69BD7618204310B10023637D /* BleSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BD7617204310B10023637D /* BleSerial.swift */; };
-		69D3F0472021E5EE00DE3911 /* consoleControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D3F0462021E5EE00DE3911 /* consoleControler.swift */; };
+		69D1DF15205056C20049D04A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D1DF13205056C20049D04A /* Interface.storyboard */; };
+		69D1DF17205056C40049D04A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D1DF16205056C40049D04A /* Assets.xcassets */; };
+		69D1DF1E205056C40049D04A /* RobConW Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 69D1DF1D205056C40049D04A /* RobConW Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		69D1DF23205056C40049D04A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D1DF22205056C40049D04A /* InterfaceController.swift */; };
+		69D1DF25205056C40049D04A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D1DF24205056C40049D04A /* ExtensionDelegate.swift */; };
+		69D1DF27205056C40049D04A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D1DF26205056C40049D04A /* ComplicationController.swift */; };
+		69D1DF29205056C50049D04A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D1DF28205056C50049D04A /* Assets.xcassets */; };
+		69D1DF2D205056C50049D04A /* RobConW.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 69D1DF11205056C20049D04A /* RobConW.app */; };
+		69D3F0472021E5EE00DE3911 /* ConsoleControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D3F0462021E5EE00DE3911 /* ConsoleControler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +64,51 @@
 			remoteGlobalIDString = 69642A601F80ED430015DB4C;
 			remoteInfo = RobCon;
 		};
+		69D1DF1F205056C40049D04A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69642A591F80ED420015DB4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69D1DF1C205056C40049D04A;
+			remoteInfo = "RobConW Extension";
+		};
+		69D1DF2B205056C50049D04A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69642A591F80ED420015DB4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69D1DF10205056C20049D04A;
+			remoteInfo = RobConW;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		69CB6E082049929D004F5E0F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				69D1DF2D205056C50049D04A /* RobConW.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D1DF31205056C50049D04A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				69D1DF1E205056C40049D04A /* RobConW Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		690235F020721C5A00C9F8E4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		690235F120721C5A00C9F8E4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		690235F220721C5B00C9F8E4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Interface.strings; sourceTree = "<group>"; };
 		692AE57320398AAD00B3513F /* arm_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_up.png; sourceTree = "<group>"; };
 		692AE57420398AAD00B3513F /* arm_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_down.png; sourceTree = "<group>"; };
 		692AE57520398AAD00B3513F /* arm_rotate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_rotate.png; sourceTree = "<group>"; };
@@ -71,9 +122,10 @@
 		693A1C731F810F3400433532 /* pause-play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-play.png"; sourceTree = "<group>"; };
 		693A1C741F810F3400433532 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		693A1C751F810F3400433532 /* lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp.png; sourceTree = "<group>"; };
-		693ADEBD201DD6F7008C0F6F /* mseSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mseSound.swift; sourceTree = "<group>"; };
-		693ADEBF201DE222008C0F6F /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
-		69595C2420249D1700EE2433 /* deviceViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = deviceViewCell.swift; sourceTree = "<group>"; };
+		693ADEBD201DD6F7008C0F6F /* RobotSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotSound.swift; sourceTree = "<group>"; };
+		693ADEBF201DE222008C0F6F /* soundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soundCell.swift; sourceTree = "<group>"; };
+		693BF77E204F04EE00DA66E6 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		69595C2420249D1700EE2433 /* deviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = deviceCell.swift; sourceTree = "<group>"; };
 		69642A611F80ED430015DB4C /* RobCon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobCon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69642A641F80ED430015DB4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69642A661F80ED430015DB4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +139,7 @@
 		697601E4201B9083005DF295 /* RobCon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RobCon.entitlements; sourceTree = "<group>"; };
 		697601E6201B9084005DF295 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		697601E8201B90FF005DF295 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		697601EA201B9493005DF295 /* mseControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mseControler.swift; sourceTree = "<group>"; };
+		697601EA201B9493005DF295 /* RobotControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotControler.swift; sourceTree = "<group>"; };
 		69A1316A1FB9DA4F00D6A55A /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		69A1316B1FB9DA5000D6A55A /* arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_down.png; sourceTree = "<group>"; };
 		69A1316C1FB9DA5000D6A55A /* arrow_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_up.png; sourceTree = "<group>"; };
@@ -103,7 +155,18 @@
 		69A6E0021F8261DF0013D172 /* mouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouse.png; sourceTree = "<group>"; };
 		69A6E0031F8261DF0013D172 /* r2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r2.png; sourceTree = "<group>"; };
 		69BD7617204310B10023637D /* BleSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleSerial.swift; sourceTree = "<group>"; };
-		69D3F0462021E5EE00DE3911 /* consoleControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = consoleControler.swift; sourceTree = "<group>"; };
+		69D1DF11205056C20049D04A /* RobConW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobConW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D1DF14205056C20049D04A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		69D1DF16205056C40049D04A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69D1DF18205056C40049D04A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69D1DF1D205056C40049D04A /* RobConW Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RobConW Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D1DF22205056C40049D04A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		69D1DF24205056C40049D04A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		69D1DF26205056C40049D04A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		69D1DF28205056C50049D04A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69D1DF2A205056C50049D04A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69D3F0462021E5EE00DE3911 /* ConsoleControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleControler.swift; sourceTree = "<group>"; };
+		69D9979C20498D7D0033D09E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +180,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		69642A721F80ED430015DB4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D1DF1A205056C40049D04A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -158,6 +228,8 @@
 				693A1C6C1F810F3400433532 /* images */,
 				69642A631F80ED430015DB4C /* RobCon */,
 				69642A781F80ED430015DB4C /* RobConUITests */,
+				69D1DF12205056C20049D04A /* RobConW */,
+				69D1DF21205056C40049D04A /* RobConW Extension */,
 				69642A621F80ED430015DB4C /* Products */,
 				697601E5201B9084005DF295 /* Frameworks */,
 			);
@@ -168,6 +240,8 @@
 			children = (
 				69642A611F80ED430015DB4C /* RobCon.app */,
 				69642A751F80ED430015DB4C /* RobConUITests.xctest */,
+				69D1DF11205056C20049D04A /* RobConW.app */,
+				69D1DF1D205056C40049D04A /* RobConW Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,7 +249,7 @@
 		69642A631F80ED430015DB4C /* RobCon */ = {
 			isa = PBXGroup;
 			children = (
-				69595C2420249D1700EE2433 /* deviceViewCell.swift */,
+				69595C2420249D1700EE2433 /* deviceCell.swift */,
 				697601E4201B9083005DF295 /* RobCon.entitlements */,
 				69642A641F80ED430015DB4C /* AppDelegate.swift */,
 				69642A661F80ED430015DB4C /* ViewController.swift */,
@@ -183,12 +257,13 @@
 				69642A6B1F80ED430015DB4C /* Assets.xcassets */,
 				69642A6D1F80ED430015DB4C /* LaunchScreen.storyboard */,
 				69642A701F80ED430015DB4C /* Info.plist */,
-				697601EA201B9493005DF295 /* mseControler.swift */,
-				693ADEBD201DD6F7008C0F6F /* mseSound.swift */,
-				693ADEBF201DE222008C0F6F /* myCell.swift */,
-				69D3F0462021E5EE00DE3911 /* consoleControler.swift */,
+				697601EA201B9493005DF295 /* RobotControler.swift */,
+				693ADEBD201DD6F7008C0F6F /* RobotSound.swift */,
+				693ADEBF201DE222008C0F6F /* soundCell.swift */,
+				69D3F0462021E5EE00DE3911 /* ConsoleControler.swift */,
 				6932E5602031FCEB00AA2544 /* Config.swift */,
 				69BD7617204310B10023637D /* BleSerial.swift */,
+				693BF77E204F04EE00DA66E6 /* About.swift */,
 			);
 			path = RobCon;
 			sourceTree = "<group>";
@@ -224,6 +299,28 @@
 			path = music;
 			sourceTree = "<group>";
 		};
+		69D1DF12205056C20049D04A /* RobConW */ = {
+			isa = PBXGroup;
+			children = (
+				69D1DF13205056C20049D04A /* Interface.storyboard */,
+				69D1DF16205056C40049D04A /* Assets.xcassets */,
+				69D1DF18205056C40049D04A /* Info.plist */,
+			);
+			path = RobConW;
+			sourceTree = "<group>";
+		};
+		69D1DF21205056C40049D04A /* RobConW Extension */ = {
+			isa = PBXGroup;
+			children = (
+				69D1DF22205056C40049D04A /* InterfaceController.swift */,
+				69D1DF24205056C40049D04A /* ExtensionDelegate.swift */,
+				69D1DF26205056C40049D04A /* ComplicationController.swift */,
+				69D1DF28205056C50049D04A /* Assets.xcassets */,
+				69D1DF2A205056C50049D04A /* Info.plist */,
+			);
+			path = "RobConW Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,10 +331,12 @@
 				69642A5D1F80ED430015DB4C /* Sources */,
 				69642A5E1F80ED430015DB4C /* Frameworks */,
 				69642A5F1F80ED430015DB4C /* Resources */,
+				69CB6E082049929D004F5E0F /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				69D1DF2C205056C50049D04A /* PBXTargetDependency */,
 			);
 			name = RobCon;
 			productName = RobCon;
@@ -262,14 +361,48 @@
 			productReference = 69642A751F80ED430015DB4C /* RobConUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		69D1DF10205056C20049D04A /* RobConW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69D1DF32205056C50049D04A /* Build configuration list for PBXNativeTarget "RobConW" */;
+			buildPhases = (
+				69D1DF0F205056C20049D04A /* Resources */,
+				69D1DF31205056C50049D04A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69D1DF20205056C40049D04A /* PBXTargetDependency */,
+			);
+			name = RobConW;
+			productName = RobConW;
+			productReference = 69D1DF11205056C20049D04A /* RobConW.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		69D1DF1C205056C40049D04A /* RobConW Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69D1DF2E205056C50049D04A /* Build configuration list for PBXNativeTarget "RobConW Extension" */;
+			buildPhases = (
+				69D1DF19205056C40049D04A /* Sources */,
+				69D1DF1A205056C40049D04A /* Frameworks */,
+				69D1DF1B205056C40049D04A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RobConW Extension";
+			productName = "RobConW Extension";
+			productReference = 69D1DF1D205056C40049D04A /* RobConW Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		69642A591F80ED420015DB4C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Jakub Bednář";
 				TargetAttributes = {
 					69642A601F80ED430015DB4C = {
@@ -289,6 +422,14 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 69642A601F80ED430015DB4C;
 					};
+					69D1DF10205056C20049D04A = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+					};
+					69D1DF1C205056C40049D04A = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 69642A5C1F80ED420015DB4C /* Build configuration list for PBXProject "RobCon" */;
@@ -306,6 +447,8 @@
 			targets = (
 				69642A601F80ED430015DB4C /* RobCon */,
 				69642A741F80ED430015DB4C /* RobConUITests */,
+				69D1DF10205056C20049D04A /* RobConW */,
+				69D1DF1C205056C40049D04A /* RobConW Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -351,6 +494,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		69D1DF0F205056C20049D04A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D1DF17205056C40049D04A /* Assets.xcassets in Resources */,
+				69D1DF15205056C20049D04A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D1DF1B205056C40049D04A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D1DF29205056C50049D04A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -362,11 +522,12 @@
 				69642A651F80ED430015DB4C /* AppDelegate.swift in Sources */,
 				6932E5612031FCEB00AA2544 /* Config.swift in Sources */,
 				69BD7618204310B10023637D /* BleSerial.swift in Sources */,
-				69595C2520249D1700EE2433 /* deviceViewCell.swift in Sources */,
-				693ADEC0201DE222008C0F6F /* myCell.swift in Sources */,
-				69D3F0472021E5EE00DE3911 /* consoleControler.swift in Sources */,
-				697601EB201B9493005DF295 /* mseControler.swift in Sources */,
-				693ADEBE201DD6F7008C0F6F /* mseSound.swift in Sources */,
+				69595C2520249D1700EE2433 /* deviceCell.swift in Sources */,
+				693BF77F204F04EE00DA66E6 /* About.swift in Sources */,
+				693ADEC0201DE222008C0F6F /* soundCell.swift in Sources */,
+				69D3F0472021E5EE00DE3911 /* ConsoleControler.swift in Sources */,
+				697601EB201B9493005DF295 /* RobotControler.swift in Sources */,
+				693ADEBE201DD6F7008C0F6F /* RobotSound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +539,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		69D1DF19205056C40049D04A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D1DF25205056C40049D04A /* ExtensionDelegate.swift in Sources */,
+				69D1DF23205056C40049D04A /* InterfaceController.swift in Sources */,
+				69D1DF27205056C40049D04A /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -385,6 +556,16 @@
 			isa = PBXTargetDependency;
 			target = 69642A601F80ED430015DB4C /* RobCon */;
 			targetProxy = 69642A761F80ED430015DB4C /* PBXContainerItemProxy */;
+		};
+		69D1DF20205056C40049D04A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69D1DF1C205056C40049D04A /* RobConW Extension */;
+			targetProxy = 69D1DF1F205056C40049D04A /* PBXContainerItemProxy */;
+		};
+		69D1DF2C205056C50049D04A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69D1DF10205056C20049D04A /* RobConW */;
+			targetProxy = 69D1DF2B205056C50049D04A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -394,6 +575,8 @@
 			children = (
 				69642A691F80ED430015DB4C /* Base */,
 				69A54D20201F6200001934CD /* cs */,
+				69D9979C20498D7D0033D09E /* en */,
+				690235F020721C5A00C9F8E4 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -403,8 +586,18 @@
 			children = (
 				69642A6E1F80ED430015DB4C /* Base */,
 				69A54D21201F6200001934CD /* cs */,
+				690235F120721C5A00C9F8E4 /* de */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		69D1DF13205056C20049D04A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69D1DF14205056C20049D04A /* Base */,
+				690235F220721C5B00C9F8E4 /* de */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -425,6 +618,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -432,6 +626,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -483,6 +678,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -490,6 +686,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -591,6 +788,84 @@
 			};
 			name = Release;
 		};
+		69D1DF2F205056C50049D04A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EC26TMBN8M;
+				INFOPLIST_FILE = "RobConW Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nontrema.RobCon.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		69D1DF30205056C50049D04A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EC26TMBN8M;
+				INFOPLIST_FILE = "RobConW Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nontrema.RobCon.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		69D1DF33205056C50049D04A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EC26TMBN8M;
+				IBSC_MODULE = RobConW_Extension;
+				INFOPLIST_FILE = RobConW/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = nontrema.RobCon.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		69D1DF34205056C50049D04A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EC26TMBN8M;
+				IBSC_MODULE = RobConW_Extension;
+				INFOPLIST_FILE = RobConW/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = nontrema.RobCon.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -617,6 +892,24 @@
 			buildConfigurations = (
 				69642A821F80ED430015DB4C /* Debug */,
 				69642A831F80ED430015DB4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69D1DF2E205056C50049D04A /* Build configuration list for PBXNativeTarget "RobConW Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69D1DF2F205056C50049D04A /* Debug */,
+				69D1DF30205056C50049D04A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69D1DF32205056C50049D04A /* Build configuration list for PBXNativeTarget "RobConW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69D1DF33205056C50049D04A /* Debug */,
+				69D1DF34205056C50049D04A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

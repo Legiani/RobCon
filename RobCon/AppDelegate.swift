@@ -9,7 +9,7 @@
 import UIKit
 import CoreBluetooth
 
-/// Zařízení které aplikakace ovládá
+/// Zařízení, které aplikakace ovládá
 var selectedPeripheral: CBPeripheral?
 
 @UIApplicationMain

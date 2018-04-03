@@ -12,8 +12,8 @@ import UIKit
 import CoreBluetooth
 import QuartzCore
 
-// Class pro ovladání stránky controleru
-final class consoleController: UIViewController, UITextFieldDelegate, BleSerialDelegate {
+// Třída pro ovládání stránky controlleru
+final class ConsoleController: UIViewController, UITextFieldDelegate, BleSerialDelegate {
     func serialStoped() {
         dismiss(animated: true, completion: nil)
     }
@@ -21,7 +21,7 @@ final class consoleController: UIViewController, UITextFieldDelegate, BleSerialD
 
     // Definování vstupu textu od uživatele
     @IBOutlet var comandInput: UITextField!
-    // Vypis I/O hlášek
+    // Výpis I/O hlášek
     @IBOutlet var comandShow: UITextView!
     
     // Když je page načtena
@@ -29,24 +29,24 @@ final class consoleController: UIViewController, UITextFieldDelegate, BleSerialD
         // Načtení grefiky
         super.viewDidLoad()
         
-        // Inicalizace serial jako třídy pro komunikaci
+        // Inicializace serial jako třídy pro komunikaci
         Bserial.Bdelegate = self
         
-        // Zobrazení klavesnice
+        // Zobrazení klávesnice
         comandInput.becomeFirstResponder()
     }
     
     // ** Definování tlačítek **
 
-    // Odeslání říkazu zařízení a přidání do konzole (odžádkování)
+    // Odeslání příkazu zařízení a přidání do konzole (odřádkování)
     @IBAction func sendCommand(_ sender: Any) {
         Bserial.sendMessageToDevice(comandInput.text!)
         comandShow.text! += comandInput.text!
         comandShow.text! += "\n"
         comandInput.text = ""
         
-        let range = NSMakeRange(comandShow.text.characters.count - 1, 0)
-        comandShow.scrollRangeToVisible(range)
+        let bottom = NSMakeRange(comandShow.text.count - 1, 1)
+        comandShow.scrollRangeToVisible(bottom)
     }
     
     // Tlačítko "Back"
@@ -62,19 +62,19 @@ final class consoleController: UIViewController, UITextFieldDelegate, BleSerialD
         // Přidej zprávu do textView
         comandShow.text! += message
         
-        let range = NSMakeRange(comandShow.text.characters.count - 1, 0)
+        let range = NSMakeRange(comandShow.text.count - 1, 0)
         comandShow.scrollRangeToVisible(range)
     }
 
-    // Když je v prubehu vypnut BLE
+    // Když je v průběhu vypnut BLE
     func serialDidChangeState() {
-        // Volání funkce zavření aktualní stránky
+        // Volání funkce zavření aktuální stránky
         dismiss(animated: true, completion: nil)
     }
     
-    // Když je BLE v prubehu odpojeno
+    // Když je BLE v průběhu odpojeno
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
-        // Volání funkce zavření aktualní stránky
+        // Volání funkce zavření aktuální stránky
         dismiss(animated: true, completion: nil)
     }
 }

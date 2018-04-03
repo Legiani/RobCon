@@ -6,8 +6,17 @@
 	<dict>
 		<key>RobCon.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<key>RobConW.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -18,6 +27,26 @@
 			<true/>
 		</dict>
 		<key>69642A741F80ED430015DB4C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6966EBA4204AA7B600BB84EB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69CB6DE22049929C004F5E0F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69D1DF10205056C20049D04A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69D99792204967B30033D09E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

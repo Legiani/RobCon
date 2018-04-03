@@ -15,7 +15,7 @@ import CoreBluetooth
 // Main page class (hlavní třída page s vyberem kontroleru)
 final class ViewController: UIViewController, BleSerialDelegate, UICollectionViewDelegate, UICollectionViewDataSource{
 
-    // Pole všech BLE razeních dle RSSI
+    // Pole všech BLE řazených dle RSSI
     var peripherals: [(peripheral: CBPeripheral, RSSI: Float)] = []
     // Propojení s cell
     @IBOutlet weak var colectionView: UICollectionView!
@@ -26,18 +26,21 @@ final class ViewController: UIViewController, BleSerialDelegate, UICollectionVie
     // Tlačítko pro vyvolání noveho hledání BLE
     @IBOutlet weak var reScan: UIBarButtonItem!
     
-    // Nazev stránky -> vypis aktualního procesu
+    // Nazev stránky -> výpis aktuálního procesu
     @IBOutlet var header: UINavigationItem!
 
+    // Alert Controler
+    var alertController: UIAlertController?
+    
     // Když je page načtena
     override func viewDidLoad() {
         // Načtení grafiky
         super.viewDidLoad()
 
-        // Inicalizace serial jako třídy pro komunikaci
+        // Inicializace serial jako třídy pro komunikaci
         Bserial = BleSerial(Bdelegate: self)
         
-        // V zakladu je tlačítko re-scan disable
+        // V základu je tlačítko "re-scan" disable
         reScan.isEnabled = true
     
         // Funkce pro kontrolu zda je zapnutí BLE
@@ -50,13 +53,13 @@ final class ViewController: UIViewController, BleSerialDelegate, UICollectionVie
     }
     
     func alert(){
-        // Kontrola zda je BLE zapnutí
+        // Kontrola zda je BLE zapnutý
         if (Bserial.centralManager.state != .poweredOn) {
-            // Když je vypnutí bluetooth vyvolá se alert který odkazuje na ovladání bluetooth v nastavení
-            // Kefinování alertu
-            let refreshAlert = UIAlertController(title: "Bluetooth is off", message: "Set Bluetooth on in options.", preferredStyle: UIAlertControllerStyle.alert)
-            refreshAlert.addAction(UIAlertAction(title: "Options", style: .default, handler: { (action: UIAlertAction!) in
-                // Když je novější než iOS 10 otevře rovnou nastavení BLE jinak jenom nastavení (starší iOS funkci neměly)
+            // Když je vypnutý bluetooth, vyvolá se alert, který odkazuje na ovládání bluetooth v nastavení
+            // Definování alertu
+            alertController = UIAlertController(title: "Bluetooth is off", message: "Set Bluetooth on in options.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController?.addAction(UIAlertAction(title: "Options", style: .default, handler: { (action: UIAlertAction!) in
+                // Když je novější než iOS 10, otevře rovnou nastavení BLE, jinak jenom nastavení (starší iOS funkci nepodporovaly)
                 if #available(iOS 10.0, *) {
                     UIApplication.shared.open(URL(string:"App-prefs:root=Bluetooth")!, options: [:], completionHandler: nil)
                 }else{
@@ -64,18 +67,18 @@ final class ViewController: UIViewController, BleSerialDelegate, UICollectionVie
                 }
             }))
             // Vyvolání alertu
-            present(refreshAlert, animated: true, completion: nil)
+            self.presentedViewController?.present(alertController!, animated: true, completion: nil)
             return
         }
     }
     
     // Tlačítko reScan
     @IBAction func reScan(_ sender: Any) {
-        // Vyprazdnit pole pro nalezená zařízení
+        // Vyprázdnit pole pro nalezená zařízení
         peripherals = []
         // Diable re-load button
         reScan.isEnabled = false
-        // Změna nazvu na skenuji
+        // Změna názvu na "skenuji"
         header.title = "Scanning ..."
         // Začít hledat zařízení
         Bserial.startScan()
@@ -83,21 +86,21 @@ final class ViewController: UIViewController, BleSerialDelegate, UICollectionVie
     
     // ** Práce s BLE **
     
-    // Když najde zařízení tak ho přidá do "theRSSI"
+    // Když najde zařízení, tak ho přidá do "theRSSI"
     func serialDidDiscoverPeripheral(_ peripheral: CBPeripheral, RSSI: NSNumber?) {
         // Kontrola duplicity zařízení v peripherals
         for exisiting in peripherals {
             if exisiting.peripheral.identifier == peripheral.identifier { return }
         }
         
-        // Přidání do seznamu zařízení a nasledné seřazení
+        // Přidání do seznamu zařízení a následné seřazení
         let theRSSI = RSSI?.floatValue ?? 0.0
         peripherals.append((peripheral: peripheral, RSSI: theRSSI))
         peripherals.sort { $0.RSSI < $1.RSSI }
         
-        // V hlavičce se oběví vyberte zařízení
+        // V hlavičce se objeví "vyberte zařízení"
         header.title = "Chose Device"
-        // Konec skenovaní
+        // Konec skenování
         Bserial.stopScan()
         // reScan je enable
         reScan.isEnabled = true
@@ -111,17 +114,14 @@ final class ViewController: UIViewController, BleSerialDelegate, UICollectionVie
     // Připrava colectionView -> kolik tam bude položek
     ///vrací počet položek v peripherals
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       
-        print(peripherals.count)
-
         return peripherals.count
     }
     
     // Samotné nastavení colectionView
     ///vrací vytvořenou cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // Definování promene cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deviceCell", for: indexPath) as! deviceViewCell
+        // Definování proměnné cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deviceCellscreen", for: indexPath) as! deviceCell
         
         // Přidání parametru vytvářené cell
         ///nadpis cell
@@ -141,19 +141,19 @@ final class ViewController: UIViewController, BleSerialDelegate, UICollectionVie
         return cell
     }
     
-    // Přesmerování na stranku s ovladačem del nazvu BLE
+    // Přesměrování na stránku s ovladačem dle názvu BLE
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Definice selectedPeripheral vybraným zařízením
+        // Definice selectedPeripheral vybraného zařízení
         
         if(peripherals.count >= 1){
             selectedPeripheral = peripherals[(indexPath as NSIndexPath).row].peripheral
         }
-        // Vymazaní pole zařízení
+        // Vymazání pole zařízení
         peripherals = []
         // Připojení k zařízení
         Bserial.connectToPeripheral(selectedPeripheral!)
         
-        // Přesmerování na stránku de nazvu zařízení
+        // Přesměrování na stránku dle názvu zařízení
         switch selectedPeripheral?.name {
         case Config.mse?:
             performSegue(withIdentifier: Config.mse_page, sender: (Any).self)

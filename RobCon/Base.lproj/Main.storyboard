@@ -1,41 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="landscape">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--About-->
+        <scene sceneID="8fr-XS-IF3">
+            <objects>
+                <viewController id="Bp5-z5-U1o" customClass="About" customModule="RobCon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p1c-gK-Taq" customClass="abouth">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xq9-tE-60t">
+                                <rect key="frame" x="0.0" y="38" width="667" height="337"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="QHc-mx-sXz">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="About the RobCon" id="yo1-5j-218">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="AR3-5G-wsc">
+                                            <connections>
+                                                <action selector="back:" destination="Bp5-z5-U1o" id="2za-Ib-pJb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7cW-iJ-uqy"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="xq9-tE-60t" id="bbs-gB-qAB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0J-va-8ZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.50074962518741" y="-751.20000000000005"/>
+        </scene>
         <!--devicePage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController title="devicePage" id="BYZ-38-t0r" customClass="ViewController" customModule="RobCon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Cbq-51-hvn">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="32"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Choice Device" id="7oi-cU-J5q" userLabel="header">
+                                        <barButtonItem key="leftBarButtonItem" title="About the RobCon" id="ieb-6X-qxF">
+                                            <connections>
+                                                <segue destination="Bp5-z5-U1o" kind="show" id="DSs-7u-VHs"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Re-scan" id="0Wf-XB-00T">
+                                            <attributedString key="userComments">
+                                                <fragment content="Re-Load">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="smallSystem"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <connections>
                                                 <action selector="reScan:" destination="BYZ-38-t0r" id="BfW-W1-g5D"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
+                                <attributedString key="userComments">
+                                    <fragment content="Choice device">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                             </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Zq-du-QAa">
                                 <rect key="frame" x="0.0" y="32" width="667" height="343"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ifp-s0-cyn">
                                     <size key="itemSize" width="222" height="343"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -43,9 +103,9 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="deviceViewCell" reuseIdentifier="deviceCell" id="GD8-Ya-cwA" userLabel="deviceViewCell" customClass="deviceViewCell" customModule="RobCon" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="deviceCellscreen" reuseIdentifier="deviceCellscreen" id="GD8-Ya-cwA" userLabel="deviceCellscreen" customClass="deviceCell" customModule="RobCon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="222" height="343"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="222" height="343"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -56,6 +116,14 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <attributedString key="userComments">
+                                                        <fragment content="Device">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="smallSystem"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Qf-2V-R7U">
                                                     <rect key="frame" x="9" y="30" width="201" height="201"/>
@@ -95,13 +163,13 @@
         <!--msePage-->
         <scene sceneID="kS3-HR-KSM">
             <objects>
-                <viewController storyboardIdentifier="msePage" id="Oa3-aS-pjp" userLabel="msePage" customClass="mseController" customModule="RobCon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="msePage" id="Oa3-aS-pjp" userLabel="msePage" customClass="RobotController" customModule="RobCon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bXp-R6-xDI">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="YrR-IR-kgk">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="32"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
@@ -113,7 +181,6 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Consol" id="0Mq-cc-5BI">
                                             <connections>
-                                                <action selector="consol:" destination="Oa3-aS-pjp" id="MKO-rE-pz5"/>
                                                 <segue destination="IrV-rT-ftc" kind="show" id="gpW-NS-HBS"/>
                                             </connections>
                                         </barButtonItem>
@@ -124,42 +191,82 @@
                                 <rect key="frame" x="27" y="135" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="arrow_up.png"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="Left_front:" destination="Oa3-aS-pjp" eventType="touchDown" id="LcN-pH-k5P"/>
                                     <action selector="Left_front_up:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="cRO-jO-V4T"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kG-CY-Voz">
-                                <rect key="frame" x="147" y="294" width="80" height="80"/>
+                                <rect key="frame" x="147" y="255" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" backgroundImage="arrow_down.png"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="Left_back:" destination="Oa3-aS-pjp" eventType="touchDown" id="H3s-BJ-YUY"/>
                                     <action selector="Left_back_up:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="AAR-bI-n5f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywH-c2-FkM">
-                                <rect key="frame" x="620" y="135" width="80" height="80"/>
+                                <rect key="frame" x="551" y="135" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="arrow_up.png"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="Right_front:" destination="Oa3-aS-pjp" eventType="touchDown" id="rxx-iO-W8h"/>
                                     <action selector="Right_front_up:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="zeT-EL-zI0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuD-jP-JWT">
-                                <rect key="frame" x="506" y="294" width="80" height="80"/>
+                                <rect key="frame" x="437" y="255" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" backgroundImage="arrow_down.png"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="Right_back:" destination="Oa3-aS-pjp" eventType="touchDown" id="jtQ-us-SRk"/>
                                     <action selector="Right_back_up:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="nCO-gh-vPX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW7-xI-epP" userLabel="MusicLibrary">
-                                <rect key="frame" x="550" y="43" width="80" height="80"/>
+                                <rect key="frame" x="481" y="43" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="music.png"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="openItunesLibraryTapped:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="qMP-cg-tvX"/>
                                 </connections>
@@ -168,133 +275,232 @@
                                 <rect key="frame" x="112" y="43" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="loud.png"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
-                                    <segue destination="jRv-72-XAy" kind="show" id="06o-7u-Kkc"/>
+                                    <segue destination="jRv-72-XAy" kind="show" id="4id-Yz-Fq5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAx-zx-vqo">
-                                <rect key="frame" x="27" y="294" width="80" height="80"/>
+                                <rect key="frame" x="27" y="255" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" backgroundImage="lamp.png"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="lamp:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="DuQ-kl-SNZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa5-Ai-XID">
-                                <rect key="frame" x="620" y="294" width="80" height="80"/>
+                                <rect key="frame" x="551" y="255" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" backgroundImage="light.png"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="light:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="MiE-HH-tTK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQH-Po-VDu">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQH-Po-VDu">
                                 <rect key="frame" x="149" y="135" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="back.png"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <connections>
+                                    <action selector="moveBack:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="MNC-mF-m0g"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pn-kC-wAr">
-                                <rect key="frame" x="508" y="135" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pn-kC-wAr">
+                                <rect key="frame" x="439" y="135" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="next.png"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <connections>
+                                    <action selector="moveForward:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="nTC-rU-fHx"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqH-nq-BGS">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqH-nq-BGS" userLabel="M_Action">
                                 <rect key="frame" x="14" y="43" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="action.png"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="action:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="8Dh-ir-PT1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRL-j6-rA7">
-                                <rect key="frame" x="620" y="43" width="80" height="80"/>
+                                <rect key="frame" x="551" y="43" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="pause-play.png"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="stopStart:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="9xO-Ya-bf2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nothing play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Al6-oj-m4t" userLabel="nowPlayingLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="Nothing play" text="Nothing play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Al6-oj-m4t">
                                 <rect key="frame" x="245" y="43" width="177" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <attributedString key="userComments">
+                                    <fragment content="nowPlaying">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ChK-xc-SAZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChK-xc-SAZ">
                                 <rect key="frame" x="245" y="72" width="179" height="274"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" adjustable="YES"/>
+                                </accessibility>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.85291129484304928" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="5gs-qd-ab9"/>
+                        <attributedString key="userComments">
+                            <fragment content="icon">
+                                <attributes>
+                                    <font key="NSFont" metaFont="smallSystem"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                     </view>
                     <connections>
-                        <outlet property="nowPlayingLabel" destination="Al6-oj-m4t" id="SsO-AQ-YbP"/>
+                        <outlet property="backButton" destination="HQH-Po-VDu" id="2yn-C1-4p2"/>
+                        <outlet property="forwardButton" destination="8Pn-kC-wAr" id="uKr-Bk-nqs"/>
+                        <outlet property="nowPlaying" destination="Al6-oj-m4t" id="KZg-Dp-TYq"/>
                         <outlet property="textViewComunicaton" destination="ChK-xc-SAZ" id="Rw9-ez-Lw4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyY-Sc-DoU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="779.46026986506752" y="-754.39999999999998"/>
+            <point key="canvasLocation" x="728" y="-604"/>
         </scene>
         <!--picker-->
         <scene sceneID="jo1-zx-j9A">
             <objects>
-                <viewController id="jRv-72-XAy" userLabel="picker" customClass="mseSound" customModule="RobCon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jRv-72-XAy" userLabel="picker" customClass="RobotSound" customModule="RobCon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gfj-MV-rhc">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="5fL-tW-jcD">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="32"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Voices" id="nia-Gr-m9c">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="SAd-hY-wJ6">
+                                            <attributedString key="userComments">
+                                                <fragment content="Back">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="smallSystem"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <connections>
-                                                <action selector="back:" destination="jRv-72-XAy" id="3cU-r5-lOX"/>
+                                                <action selector="back:" destination="jRv-72-XAy" id="Lhp-OA-GFi"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
+                                <attributedString key="userComments">
+                                    <fragment content="Zvuky">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                             </navigationBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="spY-C0-Fcu" userLabel="kind">
-                                <rect key="frame" x="35" y="51" width="673" height="343"/>
+                            <collectionView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="spY-C0-Fcu" userLabel="kind">
+                                <rect key="frame" x="20" y="43" width="627" height="332"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lZR-eg-so8">
-                                    <size key="itemSize" width="158" height="131"/>
+                                    <size key="itemSize" width="131" height="131"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Z7W-lx-lYW" customClass="myCell" customModule="RobCon" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="158" height="131"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="soundCell" id="Z7W-lx-lYW" customClass="soundCell" customModule="RobCon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="131" height="131"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="158" height="131"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="131" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XpX-sd-YMF">
-                                                    <rect key="frame" x="14" y="0.0" width="130" height="92"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG8-5K-9GP" userLabel="sound_name">
-                                                    <rect key="frame" x="15" y="93" width="128" height="31"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nazev" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG8-5K-9GP" userLabel="sound_name">
+                                                    <rect key="frame" x="0.0" y="72" width="131" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name=".SFNSText" family=".SF NS Text" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XpX-sd-YMF">
+                                                    <rect key="frame" x="22" y="0.0" width="86" height="71"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
-                                        <size key="customSize" width="158" height="131"/>
+                                        <size key="customSize" width="131" height="131"/>
                                         <connections>
                                             <outlet property="myImageView" destination="XpX-sd-YMF" id="NPx-8i-H7M"/>
                                             <outlet property="myLabel" destination="WG8-5K-9GP" id="Fh4-CC-bh0"/>
@@ -307,29 +513,37 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.85999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gvw-5J-keW"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8X-U2-C8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526.0869565217392" y="-755.07246376811599"/>
+            <point key="canvasLocation" x="1432.5337331334333" y="-604"/>
         </scene>
         <!--rPage-->
         <scene sceneID="Aed-V7-UNC">
             <objects>
-                <viewController storyboardIdentifier="rPage" id="iJU-X6-d8c" userLabel="rPage" customClass="mseController" customModule="RobCon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rPage" id="iJU-X6-d8c" userLabel="rPage" customClass="RobotController" customModule="RobCon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8jj-ko-kVJ">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="ND9-6t-PcL">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="32"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Astro Droid" id="Ibv-UP-7kq">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="cAk-uu-vge">
+                                            <attributedString key="userComments">
+                                                <fragment content="Back">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="smallSystem"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <connections>
                                                 <action selector="back:" destination="iJU-X6-d8c" id="Hp7-L1-yLk"/>
                                             </connections>
@@ -341,17 +555,31 @@
                                 <rect key="frame" x="33" y="144" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:ekb-cn-qla:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
-                                    <action selector="Left_front:" destination="iJU-X6-d8c" eventType="touchDown" id="e4o-yP-ipB"/>
                                     <action selector="Left_front:" destination="Oa3-aS-pjp" eventType="touchDown" id="znj-DL-1qB"/>
                                     <action selector="Left_front_up:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="Gu8-ci-rdz"/>
-                                    <action selector="Left_front_up:" destination="iJU-X6-d8c" eventType="touchUpInside" id="Lrl-6K-rfP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfr-Th-gcx">
                                 <rect key="frame" x="153" y="264" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:Xfr-Th-gcx:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="Left_back:" destination="Oa3-aS-pjp" eventType="touchDown" id="OyZ-WR-rfC"/>
                                     <action selector="Left_back:" destination="iJU-X6-d8c" eventType="touchDown" id="wob-xo-TEz"/>
@@ -363,6 +591,14 @@
                                 <rect key="frame" x="557" y="144" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:ekb-cn-qla:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="Right_front:" destination="Oa3-aS-pjp" eventType="touchDown" id="We8-e4-aaZ"/>
                                     <action selector="Right_front:" destination="iJU-X6-d8c" eventType="touchDown" id="id6-jF-mIw"/>
@@ -374,6 +610,14 @@
                                 <rect key="frame" x="443" y="264" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:Xfr-Th-gcx:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="Right_back:" destination="iJU-X6-d8c" eventType="touchDown" id="8DF-dz-lbB"/>
                                     <action selector="Right_back:" destination="Oa3-aS-pjp" eventType="touchDown" id="w1H-u4-VQv"/>
@@ -385,6 +629,14 @@
                                 <rect key="frame" x="487" y="52" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:QaZ-pa-kTI:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="openItunesLibraryTapped:" destination="iJU-X6-d8c" eventType="touchUpInside" id="UYN-p1-NHp"/>
                                     <action selector="openItunesLibraryTapped:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="pNO-vd-HrF"/>
@@ -394,11 +646,27 @@
                                 <rect key="frame" x="118" y="52" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:zcB-fB-C5J:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTU-Nl-Bhx">
                                 <rect key="frame" x="33" y="264" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:iTU-Nl-Bhx:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="lamp:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="Ira-oU-01l"/>
                                     <action selector="lamp:" destination="iJU-X6-d8c" eventType="touchUpInside" id="dXk-2R-VcT"/>
@@ -408,6 +676,14 @@
                                 <rect key="frame" x="557" y="264" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:wqT-Gw-dEy:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="light:" destination="iJU-X6-d8c" eventType="touchUpInside" id="apV-TK-TSd"/>
                                     <action selector="light:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="q5v-dd-Dbe"/>
@@ -417,16 +693,40 @@
                                 <rect key="frame" x="155" y="144" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:R8y-3R-K3x:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9f-d3-Nz4">
                                 <rect key="frame" x="445" y="144" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:B9f-d3-Nz4:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbY-8K-l5f">
                                 <rect key="frame" x="20" y="52" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:mbY-8K-l5f:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="action:" destination="iJU-X6-d8c" eventType="touchUpInside" id="A9J-No-Uul"/>
                                     <action selector="action:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="Nhz-yJ-PiW"/>
@@ -436,6 +736,14 @@
                                 <rect key="frame" x="557" y="52" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:YC2-SM-2Bx:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="stopStart:" destination="iJU-X6-d8c" eventType="touchUpInside" id="0Dv-up-4qh"/>
                                     <action selector="stopStart:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="efw-sr-jEY"/>
@@ -449,9 +757,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1la-89-fg5">
-                                <rect key="frame" x="251" y="81" width="179" height="103"/>
+                                <rect key="frame" x="251" y="81" width="179" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.90472019805680115" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
@@ -459,6 +767,14 @@
                                 <rect key="frame" x="251" y="175" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:uxf-b3-xBd:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="Left_back:" destination="Oa3-aS-pjp" eventType="touchDown" id="tOC-3k-IRM"/>
                                     <action selector="Left_back_up:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="EiR-uz-FkO"/>
@@ -468,6 +784,14 @@
                                 <rect key="frame" x="251" y="264" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:FnZ-n9-dgv:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="Left_back:" destination="Oa3-aS-pjp" eventType="touchDown" id="a9Z-hd-a2Y"/>
                                     <action selector="Left_back_up:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="Tp1-xa-tES"/>
@@ -477,35 +801,54 @@
                                 <rect key="frame" x="339" y="219" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button:gOf-Co-wW8:backgroundImage"/>
+                                <attributedString key="userComments">
+                                    <fragment content="icon">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="Left_back:" destination="Oa3-aS-pjp" eventType="touchDown" id="KPh-1D-ZIN"/>
                                     <action selector="Left_back_up:" destination="Oa3-aS-pjp" eventType="touchUpInside" id="7Xw-6K-oM8"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.85999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="azf-ID-eSx"/>
                     </view>
+                    <connections>
+                        <outlet property="nowPlaying" destination="4ae-Zn-PkF" id="nt2-PC-4tz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tXs-ok-IOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967.4662668665668" y="173.59999999999999"/>
+            <point key="canvasLocation" x="925.18740629685169" y="340"/>
         </scene>
         <!--consolePage-->
         <scene sceneID="cQE-KL-5O4">
             <objects>
-                <viewController storyboardIdentifier="consolePage" id="IrV-rT-ftc" userLabel="consolePage" customClass="consoleController" customModule="RobCon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="consolePage" id="IrV-rT-ftc" userLabel="consolePage" customClass="ConsoleController" customModule="RobCon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zns-V1-Kh8">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="MYS-Ty-g8Y">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="32"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Consol" id="1wd-ku-zSF">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="8Tw-W3-ebW">
+                                            <attributedString key="userComments">
+                                                <fragment content="Back">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="smallSystem"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <connections>
                                                 <action selector="back:" destination="IrV-rT-ftc" id="7Cg-HN-wUZ"/>
                                             </connections>
@@ -515,25 +858,33 @@
                                                 <action selector="sendCommand:" destination="IrV-rT-ftc" id="gpn-xf-BzD"/>
                                             </connections>
                                         </barButtonItem>
+                                        <attributedString key="userComments">
+                                            <fragment content="Consol">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="smallSystem"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AT" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rNS-qC-1jC">
-                                <rect key="frame" x="4" y="37" width="727" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AT" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rNS-qC-1jC">
+                                <rect key="frame" x="4" y="37" width="658" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfR-Ls-qYp">
-                                <rect key="frame" x="4" y="67" width="723" height="127"/>
+                                <rect key="frame" x="4" y="67" width="654" height="127"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="t9N-lx-ZHX"/>
                     </view>
                     <connections>
@@ -543,7 +894,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbv-d4-U4i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="272.11394302848578" y="1208.8"/>
+            <point key="canvasLocation" x="309" y="910"/>
         </scene>
     </scenes>
     <resources>
@@ -10907,6 +11258,6 @@ rbiwuLUAAAAAAAACAQAAAAAAAABZAAAAAAAAAAAAAAAAAAC4tw
         <image name="pause-play.png" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gpW-NS-HBS"/>
+        <segue reference="PEP-Q0-3nW"/>
     </inferredMetricsTieBreakers>
 </document>

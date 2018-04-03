@@ -10,16 +10,16 @@
 // Import knihoven
 import UIKit
 
-// Sound page class (hlavní třída stránky s vypisem zvuku)
-class mseSound: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+// Sound page class (hlavní třída stránky s výpisem zvuku)
+class RobotSound: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     
     @IBAction func back(_ sender: Any) {
-        // Zavření aktualní stránky
+        // Zavření aktuální stránky
       dismiss(animated: true, completion: nil)
     }
     
-    // Po odevření stránky
+    // Po otevření stránky
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,17 +27,17 @@ class mseSound: UIViewController, UICollectionViewDataSource, UICollectionViewDe
         super.didReceiveMemoryWarning()
     }
     
-    // Vrací počet položek v poly s nazvy zvuku
+    // Vrací počet položek v poli s názvy zvuku
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Config.array.count
+        return Config.voices.count
     }
     
-    // Sestaví všechny cell a nasledně je vypiše
+    // Sestaví všechny cell a následně je vypíše
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! myCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "soundCell", for: indexPath) as! soundCell
         // Definování obsahu cell
         cell.myImageView.image = UIImage(named: "loud.png")
-        cell.myLabel.text = Config.array[indexPath.row]
+        cell.myLabel.text = Config.voices[indexPath.row]
         // Vrací hotovou cell
         return cell
     }

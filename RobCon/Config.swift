@@ -9,25 +9,25 @@
 import Foundation
 
 struct Config {
-    // Nazev zařízení
+    // Název zařízení
     static let mse = "MSE-6"
-    // Nazev přepoje který se vyvolá po rozkliknutí
+    // Název přepoje, který se vyvolá po rozkliknutí
     static let mse_page = "msePage"
-    // Nazev zařízení
+    // Název zařízení
     static let r2 = "R2-D2"
-    // Nazev přepoje který se vyvolá po rozkliknutí
+    // Název přepoje, který se vyvolá po rozkliknutí
     static let r2_page = "rPage"
  
-    // Vychozí stránku pro zařízení s nedefinovaným názvem
+    // Výchozí stránku pro zařízení s nedefinovaným názvem
     static let def_page = "consolePage"
     
-    // Příkazy odesílané po kliknutí na přislušnou ikonu
-    // přikazi bez prefixu si zařízení drží seple do dalšího přijetí stejneho příkazu
+    // Příkazy odesílané po kliknutí na příslušnou ikonu
+    // Příkazy bez prefixu si zařízení drží sepnuté do dalšího přijetí stejného příkazu
     static let Lamp = "a"
     static let Light = "s"
     static let Action = "u"
     
-    // Příkazi s prefixem
+    // Příkazy s prefixem
     // Zařízení dostane příkaz a ten bude vykonávat do přijetí stejneho přikazu s prefixem
     static let invers_prefix = "b"
     
@@ -41,11 +41,12 @@ struct Config {
     static let Arm_down = "y"
     static let Arm_rotate = "c"
     
-    // Pole nazvu zvuku které budou vypsány
-    static let array:[String] = ["aust-paul__whatever",
+    // Pole názvu zvuků, které budou vypsány
+    static let voices:[String] = ["aust-paul__whatever",
                           "screamstudio__robot",
                           "fullmetaljedi__r2d2-sad",
                           "owlstorm__retro",
                           "urupin__robot",
                           "wubitog__space-beam"]
+    
 }

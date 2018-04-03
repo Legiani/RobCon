@@ -1,0 +1,54 @@
+
+/* Class = "UIBarButtonItem"; title = "Consol"; ObjectID = "0Mq-cc-5BI"; */
+"0Mq-cc-5BI.title" = "Consol";
+
+/* Class = "UIBarButtonItem"; title = "Re-scan"; ObjectID = "0Wf-XB-00T"; Note = "Re-Load"; */
+"0Wf-XB-00T.title" = "Re-scan";
+
+/* Class = "UINavigationItem"; title = "Consol"; ObjectID = "1wd-ku-zSF"; Note = "Consol"; */
+"1wd-ku-zSF.title" = "Consol";
+
+/* Class = "UILabel"; text = "Nothing play"; ObjectID = "4ae-Zn-PkF"; */
+"4ae-Zn-PkF.text" = "Nothing play";
+
+/* Class = "UINavigationItem"; title = "Choice Device"; ObjectID = "7oi-cU-J5q"; */
+"7oi-cU-J5q.title" = "Choice Device";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "8Tw-W3-ebW"; Note = "Back"; */
+"8Tw-W3-ebW.title" = "Back";
+
+/* Class = "UILabel"; text = "Played Song"; ObjectID = "Al6-oj-m4t"; Note = "Played Song"; */
+"Al6-oj-m4t.text" = "Played Song";
+
+/* Class = "UIViewController"; title = "devicePage"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "devicePage";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "Hyk-TD-hVi"; */
+"Hyk-TD-hVi.title" = "Back";
+
+/* Class = "UINavigationItem"; title = "Astro Droid"; ObjectID = "Ibv-UP-7kq"; */
+"Ibv-UP-7kq.title" = "Astro Droid";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "SAd-hY-wJ6"; */
+"SAd-hY-wJ6.title" = "Back";
+
+/* Class = "UIBarButtonItem"; title = "Send"; ObjectID = "SAj-QO-umI"; */
+"SAj-QO-umI.title" = "Send";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WG8-5K-9GP"; */
+"WG8-5K-9GP.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "cAk-uu-vge"; */
+"cAk-uu-vge.title" = "Back";
+
+/* Class = "UINavigationItem"; title = "Voices"; ObjectID = "nia-Gr-m9c"; */
+"nia-Gr-m9c.title" = "Voices";
+
+/* Class = "UITextField"; placeholder = "AT"; ObjectID = "rNS-qC-1jC"; */
+"rNS-qC-1jC.placeholder" = "AT";
+
+/* Class = "UILabel"; text = "Device"; ObjectID = "sBV-gB-e2q"; Note = "Device"; */
+"sBV-gB-e2q.text" = "Device";
+
+/* Class = "UINavigationItem"; title = "Mouse Droid"; ObjectID = "ufN-Qd-Um1"; */
+"ufN-Qd-Um1.title" = "Mouse Droid";

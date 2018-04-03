@@ -1,12 +1,12 @@
 
 /* Class = "UINavigationItem"; title = "Consol"; ObjectID = "1wd-ku-zSF"; */
-"1wd-ku-zSF.title" = "Consol";
+"1wd-ku-zSF.title" = "Konzole";
 
 /* Class = "UILabel"; text = "Status:"; ObjectID = "2BM-iG-rEb"; */
 "2BM-iG-rEb.text" = "Status:";
 
 /* Class = "UILabel"; text = "Last Log:"; ObjectID = "4kV-82-FcM"; */
-"4kV-82-FcM.text" = "Last Log:";
+"4kV-82-FcM.text" = "Poslední Log:";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6kG-CY-Voz"; */
 "6kG-CY-Voz.normalTitle" = "Button";
@@ -15,22 +15,22 @@
 "7Zw-cp-UCI.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
 
 /* Class = "UINavigationItem"; title = "Choice Device"; ObjectID = "7oi-cU-J5q"; */
-"7oi-cU-J5q.title" = "Choice Device";
+"7oi-cU-J5q.title" = "Vyberte zařízení";
 
 /* Class = "UILabel"; text = "Last Log:"; ObjectID = "8Mo-dB-gc8"; */
-"8Mo-dB-gc8.text" = "Last Log:";
+"8Mo-dB-gc8.text" = "Poslední Log:";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8Pn-kC-wAr"; */
 "8Pn-kC-wAr.normalTitle" = "Button";
 
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "8Tw-W3-ebW"; */
-"8Tw-W3-ebW.title" = "Back";
+"8Tw-W3-ebW.title" = "Zpět";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Al6-oj-m4t"; */
 "Al6-oj-m4t.text" = "Label";
 
 /* Class = "UITextField"; placeholder = "Get your command"; ObjectID = "DVI-hV-j0C"; */
-"DVI-hV-j0C.placeholder" = "Get your command";
+"DVI-hV-j0C.placeholder" = "Vložte příkaz";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FW7-xI-epP"; */
 "FW7-xI-epP.normalTitle" = "Button";
@@ -39,7 +39,7 @@
 "HQH-Po-VDu.normalTitle" = "Button";
 
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "Hyk-TD-hVi"; */
-"Hyk-TD-hVi.title" = "Back";
+"Hyk-TD-hVi.title" = "Zpět";
 
 /* Class = "UINavigationItem"; title = "Astro Droid"; ObjectID = "Ibv-UP-7kq"; */
 "Ibv-UP-7kq.title" = "Astro Droid";
@@ -48,7 +48,7 @@
 "JqH-nq-BGS.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Console"; ObjectID = "LAg-lr-IVv"; */
-"LAg-lr-IVv.text" = "Console";
+"LAg-lr-IVv.text" = "Konzole";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "MXJ-s7-2Zu"; */
 "MXJ-s7-2Zu.text" = "Label";
@@ -57,7 +57,7 @@
 "NRL-j6-rA7.normalTitle" = "Button";
 
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "SAd-hY-wJ6"; */
-"SAd-hY-wJ6.title" = "Back";
+"SAd-hY-wJ6.title" = "Zpět";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UuD-jP-JWT"; */
 "UuD-jP-JWT.normalTitle" = "Button";
@@ -81,10 +81,10 @@
 "bsY-Ao-CSI.text" = "Status:";
 
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "cAk-uu-vge"; */
-"cAk-uu-vge.title" = "Back";
+"cAk-uu-vge.title" = "Zpět";
 
 /* Class = "UILabel"; text = "Last Log:"; ObjectID = "eHf-Fe-Ei4"; */
-"eHf-Fe-Ei4.text" = "Last Log:";
+"eHf-Fe-Ei4.text" = "Poslední Log:";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "gTd-jg-5tJ"; */
 "gTd-jg-5tJ.text" = "Label";
@@ -102,7 +102,7 @@
 "mfd-88-tqA.text" = "Label";
 
 /* Class = "UINavigationItem"; title = "Voices"; ObjectID = "nia-Gr-m9c"; */
-"nia-Gr-m9c.title" = "Voices";
+"nia-Gr-m9c.title" = "Zvuky";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "obY-h0-k6s"; */
 "obY-h0-k6s.normalTitle" = "Button";

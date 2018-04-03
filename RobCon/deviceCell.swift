@@ -9,7 +9,7 @@
 import UIKit
 
 // Třída pro definování Cell v které se vypisují zařízení
-class deviceViewCell: UICollectionViewCell{
+class deviceCell: UICollectionViewCell{
     @IBOutlet weak var devImage: UIImageView!
     @IBOutlet weak var devLabel: UILabel!
 }

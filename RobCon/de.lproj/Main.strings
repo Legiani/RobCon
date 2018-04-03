@@ -1,0 +1,63 @@
+
+/* Class = "UIBarButtonItem"; title = "Consol"; ObjectID = "0Mq-cc-5BI"; */
+"0Mq-cc-5BI.title" = "Consol";
+
+/* Class = "UIBarButtonItem"; title = "Re-scan"; ObjectID = "0Wf-XB-00T"; Note = "Re-Load"; */
+"0Wf-XB-00T.title" = "Re-scan";
+
+/* Class = "UINavigationItem"; title = "Consol"; ObjectID = "1wd-ku-zSF"; Note = "Consol"; */
+"1wd-ku-zSF.title" = "Consol";
+
+/* Class = "UILabel"; text = "Nothing play"; ObjectID = "4ae-Zn-PkF"; */
+"4ae-Zn-PkF.text" = "Nichts ist falsch";
+
+/* Class = "UINavigationItem"; title = "Choice Device"; ObjectID = "7oi-cU-J5q"; */
+"7oi-cU-J5q.title" = "Wähle dein Gerät aus";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "8Tw-W3-ebW"; Note = "Back"; */
+"8Tw-W3-ebW.title" = "Zurück";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "AR3-5G-wsc"; */
+"AR3-5G-wsc.title" = "Zurück";
+
+/* Class = "UILabel"; text = "Nothing play"; ObjectID = "Al6-oj-m4t"; Note = "nowPlaying"; */
+"Al6-oj-m4t.text" = "nichts ist falsch";
+
+/* Class = "UIViewController"; title = "devicePage"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "devicePage";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "Hyk-TD-hVi"; */
+"Hyk-TD-hVi.title" = "Zurück";
+
+/* Class = "UINavigationItem"; title = "Astro Droid"; ObjectID = "Ibv-UP-7kq"; */
+"Ibv-UP-7kq.title" = "Astro Droid";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "SAd-hY-wJ6"; Note = "Back"; */
+"SAd-hY-wJ6.title" = "Zurück";
+
+/* Class = "UIBarButtonItem"; title = "Send"; ObjectID = "SAj-QO-umI"; */
+"SAj-QO-umI.title" = "Senden";
+
+/* Class = "UILabel"; text = "Nazev"; ObjectID = "WG8-5K-9GP"; */
+"WG8-5K-9GP.text" = "Name";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "cAk-uu-vge"; Note = "Back"; */
+"cAk-uu-vge.title" = "Zurück";
+
+/* Class = "UIBarButtonItem"; title = "About the RobCon"; ObjectID = "ieb-6X-qxF"; */
+"ieb-6X-qxF.title" = "About the RobCon";
+
+/* Class = "UINavigationItem"; title = "Voices"; ObjectID = "nia-Gr-m9c"; */
+"nia-Gr-m9c.title" = "Klingt";
+
+/* Class = "UITextField"; placeholder = "AT"; ObjectID = "rNS-qC-1jC"; */
+"rNS-qC-1jC.placeholder" = "AT";
+
+/* Class = "UILabel"; text = "Device"; ObjectID = "sBV-gB-e2q"; Note = "Device"; */
+"sBV-gB-e2q.text" = "Ausrüstung";
+
+/* Class = "UINavigationItem"; title = "Mouse Droid"; ObjectID = "ufN-Qd-Um1"; */
+"ufN-Qd-Um1.title" = "Mouse Droid";
+
+/* Class = "UINavigationItem"; title = "About the RobCon"; ObjectID = "yo1-5j-218"; */
+"yo1-5j-218.title" = "Um RobCon";
